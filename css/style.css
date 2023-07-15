@@ -1,0 +1,507 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Calibri Light";
+}
+span{
+  color: var(--lightGreen);
+  font-family: "Calibri Light";
+}
+
+:root {
+  --greenColor: rgb(3, 155, 3);
+  --shadow: 0px 0px 8px 1px rgb(168, 168, 168);
+  --transition: all 0.5s;
+  --lightGreen: rgb(125, 194, 125);
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.navBar {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  display: inline-flex;
+  position: fixed;
+  width: 100%;
+  height: auto;
+}
+.navBar .logo img {
+  width: 80px;
+  margin-right: 16em;
+}
+.navBar .navLinks {
+  background: none;
+  margin: auto;
+  margin-left: 5em;
+  margin-top: 1em;
+  display: flex;
+}
+.navBar .navLinks .links {
+  display: flex;
+  list-style: none;
+  padding-top: 0.7em;
+  margin-left: 10em;
+}
+
+.navBar .navLinks .links a {
+  font-size: 17px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  transition: all 0.5s;
+  font-family: "Helvetica";
+  /* padding-left: 3em; */
+  text-align: center;
+  padding: 0.4em;
+}
+.navBar .navLinks .links li{
+  margin: auto;
+  margin-left: 2em;
+  border-radius: 0.2em;
+}
+.navBar .navLinks .links li:hover{
+  border: 2px solid var(--greenColor);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.navBar .navLinks .links a:hover {
+  color: rgb(3, 155, 3);
+  transition: all 0.5s;
+}
+.navBar .navLinks .account {
+  margin-left: 9em;
+}
+.navBar .navLinks .account #acctBtn {
+  background: #ffffff;
+  border: 1px solid var(--lightGreen);
+  font-size: 17px;
+  transition: var(--transition);
+  margin-bottom: 0.5em;
+  width: 5em;
+  border-radius: 0.4em;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  box-shadow: var(--shadow);
+}
+.navBar .navLinks .account #acctImg{
+  width: 40px;
+}
+.navBar .navLinks .account #acctBtn #arrDwn {
+  margin-top: 0.7em;
+  width: 20px;
+  margin-left: 0.6em;
+  transform: rotate(180deg);
+  transition: var(--transition);
+  
+}
+.navBar .navLinks .account #acctBtn #arrDwn.active {
+  transform: rotate(0deg);
+  transition: var(--transition);
+}
+.navBar .navLinks .account .acctContents.active {
+  transition: var(--transition);
+  opacity: 1;
+}
+.navBar .navLinks .account .acctContents.active ol {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.769);
+  backdrop-filter: blur(6px);
+  border-radius: 0.3em;
+  box-shadow: var(--shadow);
+  width: 8em;
+  padding: 0.4em;
+}
+.navBar .navLinks .account .acctContents.active ol li {
+  list-style: none;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+.navBar .navLinks .account .acctContents.active ol li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+}
+.navBar .navLinks .account .acctContents.active ol li a:hover {
+  color: green;
+}
+.navBar .navLinks .account .acctContents.active ol #li1 {
+  border: 1px solid var(--greenColor);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.navBar .navLinks .account .acctContents {
+  opacity: 0;
+}
+.navBar .navLinks .account .acctContents ol {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 0.3em;
+  box-shadow: var(--shadow);
+  width: 8em;
+  padding: 0.4em;
+  margin-left: -1em;
+}
+.navBar .navLinks .account .acctContents ol li {
+  list-style: none;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+.navBar .navLinks .account .acctContents ol li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 17px;
+}
+.navBar .navLinks .account .acctContents ol #li1 {
+  border: 1px solid var(--lightGreen);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.menu img{
+  width: 30px;
+  margin-top: 1.5em;
+  display: none;
+}
+.sectionOne{
+  padding-left: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #e4e4ff;
+}
+.sectionOne .leftSect{
+  padding-top: 6em;
+  padding-right: 4em;
+}
+.sectionOne .leftSect h1{
+  padding-left: 0.4em;
+  font-size: 120px;
+  /* text-align: center; */
+  padding-bottom: 0em;
+  line-height: 0.9em;
+}
+.sectionOne .leftSect h2{
+  border: 2px solid var(--lightGreen);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0.3em;
+  font-size: 70px;
+  padding-left: 0.7em;
+  /* text-align: center; */
+}
+.sectionOne .leftSect h3{
+  text-align: center;
+  padding-top: 0.2em;
+  font-family: "Comic Sans MS";
+  color: #2c2c2c;
+}
+
+.sectionOne .leftSect button{
+  font-size: 19px;
+  padding: 0.5em;
+  background:none;
+  border: 2px solid var(--lightGreen);
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 0.4em;
+
+  margin-top: 1.5em;
+  margin-left: 40%;
+}
+
+.sectionOne .leftSect button:hover{
+  transform: translateY(-0.3em);
+}
+.sectionOne .leftSect button:hover{
+  transition: var(--transition);
+  background-color: var(--lightGreen);
+}
+
+.sectionOne .leftSect h1 span{
+  color: var(--greenColor);
+}
+.sectionOne .leftSect h1 #online{
+  color: #000;
+  font-size: 50px;
+}
+.rightSect{
+  background-color: #fff;
+  border-top-left-radius: 30em;
+  padding-top: 7em;
+  padding-left: 8em;
+
+}
+.rightSect img{
+  width: 500px;
+}
+
+#ah{
+  padding-top: 50%;
+}
+
+
+/* section 2 */
+.sectionTwo{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 2em;
+  margin: auto;
+  width: 95%;
+  background: none;
+}
+.sectionTwo .container{
+    background-color: #fff;
+    width: 17em;
+    height: 22rem;
+    box-shadow: var(--shadow);
+    border-radius: 0.4em;
+    transition: var(--transition);
+
+}
+.sectionTwo .container h1{
+  font-size: 22px;
+  padding: 0.5em;
+  font-family: 'Calibri';
+  font: bold;
+  padding-top: 1em;
+}
+.sectionTwo .container h2{
+  font-family: 'Calibri Light';
+  font-size: 18px;
+  padding-left: 1em;
+  padding-right: 0.5em;
+}
+
+.sectionTwo .container1{
+    margin-top: -4em;
+    background-color: #fff;
+    width: 17em;
+    height: 22rem;
+    box-shadow: var(--shadow);
+    border-radius: 0.4em;
+    transition: var(--transition);
+}
+.sectionTwo .container .img{
+  background: none;
+  margin: auto;
+}
+
+.sectionTwo .container .img img{
+  width: 250px;
+}
+
+.sectionTwo .container1 .img{
+  background: none;
+  margin: auto;
+}
+.sectionTwo .container1 h1{
+  font-size: 22px;
+  padding: 0.5em;
+  font-family: 'Calibri';
+  font: bold;
+}
+.sectionTwo .container1 h2{
+  font-family: 'Calibri Light';
+  font-size: 18px;
+  padding-left: 1em;
+  padding-right: 0.5em;
+}
+
+.sectionTwo .container1 .img img{
+  width: 250px;
+}
+
+
+
+
+@media only screen and (max-width: 900px){
+  .navBar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+  .navBar .menu img{
+    display: block;
+    cursor: pointer;
+  }
+  .navBar .navLinks{
+    margin-left: 1.4em;
+    margin-top: -140%;
+    transition: var(--transition);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .navBar .navLinks.active{
+    margin-top: 0%;
+    transition: var(--transition);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .navBar .navLinks .links{
+    display: block;
+  }
+  .navBar .navLinks .account{
+    margin-top: 1em;
+    margin-right: 2.5em;
+    
+  }
+  .navBar .logo img {
+    width: 70px;
+  }
+  .navBar .navLinks {
+    display: block;
+  }
+  .navBar .navLinks .links {
+    display: block;
+    margin-left: 0em;
+  }
+  .navBar .navLinks .links a {
+    font-size: 17px;
+    line-height: 2em;
+    padding: 0em;
+  }
+  .navBar .navLinks .account {
+    margin-left: 0em;
+  }
+  .navBar .navLinks .account #acctBtn {
+    font-size: 17px;
+    margin-bottom: 0.5em;
+    width: 7em;
+    height: 40px;
+    display: flex;
+  }
+  .navBar .navLinks .account #acctImg{
+    width: 40px;
+  }
+  .navBar .navLinks .account #acctBtn #arrDwn {
+    margin-top: 0.7em;
+    padding: 0;
+    width: 20px;
+    margin-left: 2.3em;
+    transform: rotate(180deg);
+    transition: var(--transition);
+    
+  }
+  .navBar .navLinks .account .acctContents.active ol {
+    margin-left: -0.3em;
+  }
+  .navBar .navLinks .account .acctContents.active ol li {
+    list-style: none;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
+
+  .sectionOne{
+    padding-left: 0.5em;
+    display: block;
+  }
+  .sectionOne .leftSect{
+    padding-top: 6em;
+    background:none;
+    width: 90%;
+    margin: auto;
+  }
+  .sectionOne .leftSect h1{
+    padding-left: 0.4em;
+    font-size: 70px;
+    text-align: center;
+  }
+  .sectionOne .leftSect h2{
+    font-size: 30px;
+    padding-left: 1em;
+    text-align: center;
+  }
+  .sectionOne .leftSect h3{
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .sectionOne .leftSect button{
+    margin-bottom: 0.5em;
+    margin-left: 35%;
+  }
+  .sectionOne .leftSect button:hover{
+    transform: translateY(0deg);
+    background-color: var(--lightGreen);
+  }
+  .sectionOne .rightSect{
+    padding-top: 2em;
+    padding-left: 0.5em;
+  }
+  .sectionOne .rightSect img{
+    width: 320px;
+
+  }
+
+
+
+  .sectionTwo{
+    display: block;
+    padding: 2em;
+    margin: auto;
+    width: 95%;
+  }
+  .sectionTwo .container{
+      background-color: #fff;
+      width: 17em;
+      height: 17rem;
+      box-shadow: var(--shadow);
+      border-radius: 0.4em;
+      transition: var(--transition);
+      margin-top: 2em;
+
+  }
+  .sectionTwo .container h1{
+    font-size: 18px;
+    padding: 0.5em;
+    padding-top: 1em;
+  }
+  .sectionTwo .container h2{
+    font-family: 'Calibri Light';
+    font-size: 14px;
+    padding-left: 1em;
+    padding-right: 0.5em;
+  }
+
+  .sectionTwo .container1{
+      margin-top: 2em;
+      width: 17em;
+      height: 17rem;
+      border-radius: 0.3em;
+  }
+  .sectionTwo .container .img{
+    background: none;
+    width: 70%;
+    margin: auto;
+  }
+
+  .sectionTwo .container .img img{
+    width: 180px;
+  }
+
+  .sectionTwo .container1 .img{
+    background: none;
+    width: 70%;
+    margin: auto;
+  }
+  .sectionTwo .container1 h1{
+    font-size: 18px;
+    padding: 0.5em;
+    font: bold;
+  }
+  .sectionTwo .container1 h2{
+    font-size: 14px;
+    padding-left: 1em;
+    padding-right: 0.5em;
+  }
+
+  .sectionTwo .container1 .img img{
+    width: 180px;
+  }
+
+}
