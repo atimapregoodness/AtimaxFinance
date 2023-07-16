@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500&family=PT+Sans:wght@400;700&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300;400&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -6,7 +8,6 @@
 }
 span{
   color: var(--lightGreen);
-  font-family: "Calibri Light";
 }
 
 :root {
@@ -14,6 +15,10 @@ span{
   --shadow: 0px 0px 8px 1px rgb(168, 168, 168);
   --transition: all 0.5s;
   --lightGreen: rgb(125, 194, 125);
+  --font1: 'Fira Sans', sans-serif;
+  --font2: 'PT Sans', sans-serif;
+  --font3: 'Roboto', sans-serif;
+  --font4: 'Roboto Condensed', sans-serif;
 }
 
 body {
@@ -42,7 +47,7 @@ body {
 .navBar .navLinks .links {
   display: flex;
   list-style: none;
-  padding-top: 0.7em;
+  padding-top: 0em;
   margin-left: 10em;
 }
 
@@ -51,7 +56,8 @@ body {
   text-decoration: none;
   color: rgb(0, 0, 0);
   transition: all 0.5s;
-  font-family: "Helvetica";
+  font-family: var(--font3);
+  font-weight: 400;
   /* padding-left: 3em; */
   text-align: center;
   padding: 0.4em;
@@ -124,6 +130,7 @@ body {
   text-decoration: none;
   color: #000;
   font-size: 17px;
+  font-family: var(--font4);
 }
 .navBar .navLinks .account .acctContents.active ol li a:hover {
   color: green;
@@ -171,7 +178,8 @@ body {
   padding-left: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #e4e4ff;
+  background-color: #f5f5ff;
+  background-size: cover;
 }
 .sectionOne .leftSect{
   padding-top: 6em;
@@ -182,23 +190,21 @@ body {
   font-size: 120px;
   /* text-align: center; */
   padding-bottom: 0em;
-  line-height: 0.9em;
+  line-height: 1em;
+  font-family: var(--font4);
 }
 .sectionOne .leftSect h2{
-  border: 2px solid var(--lightGreen);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-radius: 0.3em;
-  font-size: 70px;
-  padding-left: 0.7em;
+  font-size: 40px;
+  padding-left: 1.3em;
+  font-family: var(--font1);
   /* text-align: center; */
 }
 .sectionOne .leftSect h3{
   text-align: center;
   padding-top: 0.2em;
-  font-family: "Comic Sans MS";
+  font-family: var(--font2);
   color: #2c2c2c;
+  font-size: 20px;
 }
 
 .sectionOne .leftSect button{
@@ -224,10 +230,6 @@ body {
 
 .sectionOne .leftSect h1 span{
   color: var(--greenColor);
-}
-.sectionOne .leftSect h1 #online{
-  color: #000;
-  font-size: 50px;
 }
 .rightSect{
   background-color: #fff;
@@ -266,15 +268,21 @@ body {
 .sectionTwo .container h1{
   font-size: 22px;
   padding: 0.5em;
-  font-family: 'Calibri';
-  font: bold;
+  font-family: var(--font3);
+  font-weight: 500;
   padding-top: 1em;
 }
 .sectionTwo .container h2{
   font-family: 'Calibri Light';
   font-size: 18px;
+  font-weight: 400;
   padding-left: 1em;
   padding-right: 0.5em;
+  background-color: rgb(223, 234, 255);
+  height: 5em;
+  padding-top: 0.8em;
+  border-radius: 1em 0;
+  font-family: var(--font4);
 }
 
 .sectionTwo .container1{
@@ -302,18 +310,26 @@ body {
 .sectionTwo .container1 h1{
   font-size: 22px;
   padding: 0.5em;
-  font-family: 'Calibri';
-  font: bold;
+  font-family: var(--font3);
+  font-weight: 400;
 }
 .sectionTwo .container1 h2{
-  font-family: 'Calibri Light';
+  font-family: var(--font4);
   font-size: 18px;
   padding-left: 1em;
   padding-right: 0.5em;
+  background-color: rgb(223, 234, 255);
+  height: 5em;
+  padding-top: 0.8em;
+  font-weight: 400;
+  border-radius: 1em 0;
 }
 
 .sectionTwo .container1 .img img{
   width: 250px;
+}
+.sectionTwo .container1 .img #imgSize{
+  width: 200px;
 }
 
 
