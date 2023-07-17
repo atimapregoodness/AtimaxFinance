@@ -37,6 +37,7 @@ body {
   position: fixed;
   width: 100%;
   height: auto;
+  transition: var(--transition);
 }
 .navBar .logo img {
   width: 80px;
@@ -76,16 +77,25 @@ body {
   margin: auto;
   margin-left: 2em;
   border-radius: 0.2em;
+  transition: var(--transition);
 }
 .navBar .navLinks .links li:hover{
-  border: 2px solid var(--greenColor);
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  transform: translateY(-0.2em);
+  transition: var(--transition);
+  text-shadow:black;
+
 }
 .navBar .navLinks .links a:hover {
   color: rgb(3, 155, 3);
   transition: all 0.5s;
+  background-color:  rgba(3, 155, 3, 0.089) ;
+  border-radius: 0.5em;
+}
+#targetLink{
+  color: rgb(3, 155, 3);
+  transition: all 0.5s;
+  background-color:  rgba(3, 155, 3, 0.171) ;
+  border-radius: 0.5em;
 }
 .navBar .navLinks .account {
   margin-left: 9em;
@@ -144,6 +154,7 @@ body {
 }
 .navBar .navLinks .account .acctContents.active ol li a:hover {
   color: green;
+  padding-top: -1em;
 }
 .navBar .navLinks .account .acctContents.active ol #li1 {
   border: 1px solid var(--greenColor);
@@ -173,6 +184,7 @@ body {
   color: #000;
   font-size: 17px;
 }
+
 .navBar .navLinks .account .acctContents ol #li1 {
   border: 1px solid var(--lightGreen);
   border-top: none;
@@ -267,6 +279,7 @@ body {
   margin: auto;
   width: 95%;
   background: none;
+  margin-top: -5em;
 }
 .sectionTwo .container{
     background-color: #fff;
@@ -297,7 +310,7 @@ body {
 }
 
 .sectionTwo .container1{
-    margin-top: -4em;
+    margin-top: 0em;
     background-color: #fff;
     width: 17em;
     height: 22rem;
@@ -349,6 +362,12 @@ body {
 
 
 
+@media only screen and (max-width: 892px){
+
+}
+
+
+
 @media only screen and (max-width: 900px){
   .navBar{
     display: grid;
@@ -381,9 +400,11 @@ body {
   .navBar .navLinks .links li a{
     margin: 0;
     padding: 0;
+    padding: 0.3em;
   }
   .navBar .navLinks .links li:hover{
     border: none;
+    transform: none;
   }
   .navBar .navLinks .account{
     margin-top: 1em;
@@ -552,3 +573,15 @@ body {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
