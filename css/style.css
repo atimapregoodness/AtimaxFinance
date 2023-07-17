@@ -23,7 +23,12 @@ span{
 
 body {
   background-color: rgb(255, 255, 255);
+  opacity: 1;
+  transition: var(--transition);
 }
+
+
+
 
 .navBar {
   background-color: rgba(255, 255, 255, 0.7);
@@ -45,10 +50,15 @@ body {
   display: flex;
 }
 .navBar .navLinks .links {
-  display: flex;
+  /* display: flex; */
   list-style: none;
   padding-top: 0em;
   margin-left: 10em;
+}
+.navBar .navLinks .links li {
+  display: inline-block;
+  padding-top: 0.5em;
+
 }
 
 .navBar .navLinks .links a {
@@ -179,6 +189,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #f5f5ff;
+  background-image: url(/assets/bg5.jpg);
   background-size: cover;
 }
 .sectionOne .leftSect{
@@ -240,6 +251,7 @@ body {
 }
 .rightSect img{
   width: 500px;
+  padding-bottom: 2em;
 }
 
 #ah{
@@ -278,7 +290,6 @@ body {
   font-weight: 400;
   padding-left: 1em;
   padding-right: 0.5em;
-  background-color: rgb(223, 234, 255);
   height: 5em;
   padding-top: 0.8em;
   border-radius: 1em 0;
@@ -294,13 +305,16 @@ body {
     border-radius: 0.4em;
     transition: var(--transition);
 }
-.sectionTwo .container .img{
-  background: none;
+.sectionTwo .container1 .img{
   margin: auto;
+  background: #fff;
+  padding-left: 1em;
+  
 }
 
 .sectionTwo .container .img img{
   width: 250px;
+  /* border-radius: 2em; */
 }
 
 .sectionTwo .container1 .img{
@@ -318,7 +332,6 @@ body {
   font-size: 18px;
   padding-left: 1em;
   padding-right: 0.5em;
-  background-color: rgb(223, 234, 255);
   height: 5em;
   padding-top: 0.8em;
   font-weight: 400;
@@ -330,6 +343,7 @@ body {
 }
 .sectionTwo .container1 .img #imgSize{
   width: 200px;
+  margin-left: 1em;
 }
 
 
@@ -339,7 +353,8 @@ body {
   .navBar{
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    transition: var(--transition);
+    margin: auto;
   }
   .navBar .menu img{
     display: block;
@@ -349,17 +364,26 @@ body {
     margin-left: 1.4em;
     margin-top: -140%;
     transition: var(--transition);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    background: none;
+    transition: var(--transition);
+
   }
   .navBar .navLinks.active{
     margin-top: 0%;
     transition: var(--transition);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
   }
-  .navBar .navLinks .links{
+  .navBar .navLinks .links li{
     display: block;
+    text-align: center;
+    
+  }
+  .navBar .navLinks .links li a{
+    margin: 0;
+    padding: 0;
+  }
+  .navBar .navLinks .links li:hover{
+    border: none;
   }
   .navBar .navLinks .account{
     margin-top: 1em;
@@ -390,6 +414,7 @@ body {
     width: 7em;
     height: 40px;
     display: flex;
+    margin-left: 4em;
   }
   .navBar .navLinks .account #acctImg{
     width: 40px;
@@ -404,7 +429,9 @@ body {
     
   }
   .navBar .navLinks .account .acctContents.active ol {
-    margin-left: -0.3em;
+    margin-left: 4em;
+    position: relative;
+    margin-bottom: 1em;
   }
   .navBar .navLinks .account .acctContents.active ol li {
     list-style: none;
@@ -413,7 +440,7 @@ body {
   }
 
   .sectionOne{
-    padding-left: 0.5em;
+    padding-left: 0em;
     display: block;
   }
   .sectionOne .leftSect{
@@ -421,6 +448,7 @@ body {
     background:none;
     width: 90%;
     margin: auto;
+    padding-left: 0em;
   }
   .sectionOne .leftSect h1{
     padding-left: 0.4em;
@@ -465,7 +493,7 @@ body {
   .sectionTwo .container{
       background-color: #fff;
       width: 17em;
-      height: 17rem;
+      height: 18rem;
       box-shadow: var(--shadow);
       border-radius: 0.4em;
       transition: var(--transition);
@@ -487,7 +515,7 @@ body {
   .sectionTwo .container1{
       margin-top: 2em;
       width: 17em;
-      height: 17rem;
+      height: 18rem;
       border-radius: 0.3em;
   }
   .sectionTwo .container .img{
@@ -518,6 +546,9 @@ body {
 
   .sectionTwo .container1 .img img{
     width: 180px;
+  }
+  .sectionTwo .container1 .img #imgSize{
+    width: 150px;
   }
 
 }

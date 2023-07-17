@@ -2,6 +2,7 @@ const acctBtn = document.querySelector('#acctBtn')
 const acctCont = document.querySelector('.acctContents')
 const arrDwn = document.querySelector('#arrDwn')
 const body = document.querySelector('body')
+
 acctBtn.addEventListener('click', () => {
       acctCont.classList.toggle('active')
       arrDwn.classList.toggle('active')
