@@ -257,14 +257,17 @@ body {
 .rightSect{
   background-color: #fff;
   border-top-left-radius: 30em;
-  padding-top: 7em;
-  padding-left: 8em;
+  padding-top: 5em;
+  padding-left: 5em;
 
 }
 .rightSect img{
-  width: 500px;
-  padding-bottom: 2em;
+  width: 503px;
+  padding-bottom: 3em;
 }
+
+
+
 
 #ah{
   padding-top: 50%;
@@ -494,13 +497,11 @@ body {
     transform: translateY(0deg);
     background-color: var(--lightGreen);
   }
-  .sectionOne .rightSect{
-    padding-top: 2em;
-    padding-left: 0.5em;
-  }
-  .sectionOne .rightSect img{
-    width: 320px;
-
+  .rightSect img{
+    width: 350px;
+    padding-bottom: 0em;
+    margin-left: -5em;
+    margin-top: -4em;
   }
 
 

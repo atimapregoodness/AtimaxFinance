@@ -18,4 +18,22 @@ const navLinks = document.querySelector('.navLinks')
 menuBtn.addEventListener('click', () => {
       navLinks.classList.toggle('active')
 })
+// const changeImg = document.querySelector('.changeImg')
+
+// const cImg = function (src, time) {
+//       setTimeout(() => {
+//             for (let i = 1; i <= 6; i++){
+//                   changeImg.src = src
+//             }
+//       }, time)
+//       return src, time
+// }
+// cImg(`/assets/img2.png`, 3000)
+// cImg(`/assets/img3.png`, 6000)
+// cImg(`/assets/img4.png`, 9000)
+// cImg(`/assets/img5.png`, 12000)
+// cImg(`/assets/img6.png`, 15000)
+
+
+
 
