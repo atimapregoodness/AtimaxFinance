@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Calibri Light";
 }
+
 span{
   color: var(--lightGreen);
 }
@@ -44,7 +45,7 @@ body {
   margin-right: 16em;
 }
 .navBar .navLinks {
-  background: none;
+  background: n2;
   margin: auto;
   margin-left: 5em;
   margin-top: 1em;
@@ -82,20 +83,19 @@ body {
 .navBar .navLinks .links li:hover{
   transform: translateY(-0.2em);
   transition: var(--transition);
-  text-shadow:black;
 
 }
 .navBar .navLinks .links a:hover {
-  color: rgb(3, 155, 3);
+  color: #00be7f;
   transition: all 0.5s;
   background-color:  rgba(3, 155, 3, 0.089) ;
-  border-radius: 0.5em;
+  border-radius: 0.3em;
 }
 #targetLink{
-  color: rgb(3, 155, 3);
+  color: #00be7f;
   transition: all 0.5s;
-  background-color:  rgba(3, 155, 3, 0.171) ;
-  border-radius: 0.5em;
+  background-color:  rgba(3, 155, 3, 0.089) ;
+  border-radius: 0.3em;
 }
 .navBar .navLinks .account {
   margin-left: 9em;
@@ -196,41 +196,64 @@ body {
   margin-top: 1.5em;
   display: none;
 }
-.sectionOne{
-  padding-left: 2em;
+
+
+
+.section1{
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #f5f5ff;
-  background-image: url(/assets/bg5.jpg);
+  width: 100%;
+  height: 38em;
   background-size: cover;
-}
-.sectionOne .leftSect{
-  padding-top: 6em;
-  padding-right: 4em;
-}
-.sectionOne .leftSect h1{
-  padding-left: 0.4em;
-  font-size: 120px;
-  /* text-align: center; */
-  padding-bottom: 0em;
-  line-height: 1em;
-  font-family: var(--font4);
-}
-.sectionOne .leftSect h2{
-  font-size: 40px;
-  padding-left: 1.3em;
-  font-family: var(--font1);
-  /* text-align: center; */
-}
-.sectionOne .leftSect h3{
-  text-align: center;
-  padding-top: 0.2em;
-  font-family: var(--font2);
-  color: #2c2c2c;
-  font-size: 20px;
-}
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius:10%;
 
-.sectionOne .leftSect button{
+}
+.section1 .rightSection{
+  padding-top: 8em;
+}
+.section1 .rightSection img{
+  width: 550px;
+  margin-left: 4em;
+}
+.section1 .leftSection{
+  padding-top: 9em;
+}
+.text{
+  background-color: #ffffff;
+  /* border: 5px solid #f5f5ff; */
+  /* box-shadow: var(--shadow); */
+  margin: auto;
+  width: 25em;
+  padding: 1em;
+  border-radius: 1em;
+}
+.section1 .leftSection h1{
+  margin-top: 1em;
+  font-family: var(--font3);
+  font-size: 25px;
+  color: #000;
+  padding-bottom: 0.5em;
+  text-align: center;
+  /* background-color: #9bffa844; */
+  padding: 0.5em;
+  border-radius: 2em;
+  /* width: 90%; */
+
+}
+.section1 .leftSection h1 span{
+  color: rgb(255, 0, 0);
+}
+.section1 .leftSection h3{
+  font-family: var(--font5);
+  line-height: 1.5em;
+  padding: 0.5em;
+  text-align: center;
+  color: #1a1a1a;
+}
+.section1 .leftSection button{
   font-size: 19px;
   padding: 0.5em;
   background:none;
@@ -239,19 +262,58 @@ body {
   transition: var(--transition);
   border-radius: 0.4em;
 
-  margin-top: 1.5em;
-  margin-left: 40%;
+  margin-top: 2em;
 }
 
-.sectionOne .leftSect button:hover{
+.section1 .leftSection button:hover{
   transform: translateY(-0.3em);
 }
-.sectionOne .leftSect button:hover{
+.section1 .leftSection button:hover{
   transition: var(--transition);
   background-color: var(--lightGreen);
 }
+.startBtn{
+  width: 7em;
+  margin: auto;
+}
 
-.sectionOne .leftSect h1 span{
+
+.section2{
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: none;
+  background-size: cover;
+}
+.section2 .leftSect{
+  padding-top: 6em;
+  padding-right: 4em;
+}
+.section2 .leftSect h1{
+  padding-left: 0.4em;
+  font-size: 120px;
+  /* text-align: center; */
+  padding-bottom: 0em;
+  line-height: 1em;
+  font-family: var(--font4);
+}
+.section2 .leftSect h2{
+  font-size: 40px;
+  padding-left: 1.3em;
+  font-family: var(--font1);
+  /* text-align: center; */
+}
+.section2 .leftSect h3{
+  text-align: center;
+  padding-top: 0.2em;
+  font-family: var(--font2);
+  color: #2c2c2c;
+  font-size: 20px;
+}
+
+
+
+.section2 .leftSect h1 span{
   color: var(--greenColor);
 }
 .rightSect{
@@ -261,10 +323,12 @@ body {
   padding-left: 5em;
 
 }
-.rightSect img{
+.rightSect .img #images{
   width: 503px;
   padding-bottom: 3em;
+  transition: all 5s;
 }
+
 
 
 
@@ -275,16 +339,16 @@ body {
 
 
 /* section 2 */
-.sectionTwo{
+.section3{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 2em;
   margin: auto;
   width: 95%;
   background: none;
-  margin-top: -5em;
+  margin-top: 10em;
 }
-.sectionTwo .container{
+.section3 .container{
     background-color: #fff;
     width: 17em;
     height: 22rem;
@@ -293,14 +357,14 @@ body {
     transition: var(--transition);
 
 }
-.sectionTwo .container h1{
+.section3 .container h1{
   font-size: 22px;
   padding: 0.5em;
   font-family: var(--font3);
   font-weight: 500;
   padding-top: 1em;
 }
-.sectionTwo .container h2{
+.section3 .container h2{
   font-family: 'Calibri Light';
   font-size: 18px;
   font-weight: 400;
@@ -312,7 +376,7 @@ body {
   font-family: var(--font4);
 }
 
-.sectionTwo .container1{
+.section3 .container1{
     margin-top: 0em;
     background-color: #fff;
     width: 17em;
@@ -321,29 +385,29 @@ body {
     border-radius: 0.4em;
     transition: var(--transition);
 }
-.sectionTwo .container1 .img{
+.section3 .container1 .img{
   margin: auto;
   background: #fff;
   padding-left: 1em;
   
 }
 
-.sectionTwo .container .img img{
+.section3 .container .img img{
   width: 250px;
   /* border-radius: 2em; */
 }
 
-.sectionTwo .container1 .img{
-  background: none;
+.section3 .container1 .img{
+  background: n2;
   margin: auto;
 }
-.sectionTwo .container1 h1{
+.section3 .container1 h1{
   font-size: 22px;
   padding: 0.5em;
   font-family: var(--font3);
   font-weight: 400;
 }
-.sectionTwo .container1 h2{
+.section3 .container1 h2{
   font-family: var(--font4);
   font-size: 18px;
   padding-left: 1em;
@@ -354,10 +418,10 @@ body {
   border-radius: 1em 0;
 }
 
-.sectionTwo .container1 .img img{
+.section3 .container1 .img img{
   width: 250px;
 }
-.sectionTwo .container1 .img #imgSize{
+.section3 .container1 .img #imgSize{
   width: 200px;
   margin-left: 1em;
 }
@@ -365,9 +429,7 @@ body {
 
 
 
-@media only screen and (max-width: 892px){
 
-}
 
 
 
@@ -387,7 +449,7 @@ body {
     margin-top: -140%;
     transition: var(--transition);
     display: flex;
-    background: none;
+    background: n2;
     transition: var(--transition);
 
   }
@@ -406,8 +468,8 @@ body {
     padding: 0.3em;
   }
   .navBar .navLinks .links li:hover{
-    border: none;
-    transform: none;
+    border: n2;
+    transform: n2;
   }
   .navBar .navLinks .account{
     margin-top: 1em;
@@ -458,42 +520,122 @@ body {
     margin-bottom: 1em;
   }
   .navBar .navLinks .account .acctContents.active ol li {
-    list-style: none;
+    list-style: n2;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
   }
 
-  .sectionOne{
+
+  .section1{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #f5f5ff;
+    width: 100%;
+    height: 40em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius:10%;
+
+  }
+  .section1 .leftSection{
+    margin-top: -3em;
+  }
+  .section1 .rightSection img{
+    width: 450px;
+    margin-left: 0em;
+  }
+
+  .text{
+    width: 15em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+  .section1 .leftSection h1{
+    margin-top: 0.4em;
+    font-size: 20px;
+    color: #000;
+    padding-bottom: 0.5em;
+    padding: 0.5em;
+    border-radius: 2em;
+    /* width: 90%; */
+
+  }
+  .section1 .leftSection h1 span{
+    color: rgb(255, 0, 0);
+  }
+  .section1 .leftSection h3{
+    font-family: var(--font5);
+    line-height: 1.5em;
+    padding: 0.5em;
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 14px;
+  }
+  .section1 .leftSection button{
+    font-size: 12px;
+    padding: 0.5em;
+    background:none;
+    border: 2px solid var(--lightGreen);
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 0.4em;
+
+    margin-top: 1em;
+  }
+
+  .section1 .leftSection button:hover{
+    transform: translateY(-0.3em);
+  }
+  .section1 .leftSection button:hover{
+    transition: var(--transition);
+    background-color: var(--lightGreen);
+  }
+  .startBtn{
+    width: 4.5em;
+    margin: auto;
+  }
+  .rightSection{
+    padding-left: 0.3em;
+    padding-top: 0em;
+    margin-top: -5em;
+  }
+  .section1 .rightSection img{
+    width: 300px;
+    
+  }
+
+  .section2{
     padding-left: 0em;
     display: block;
   }
-  .sectionOne .leftSect{
+  .section2 .leftSect{
     padding-top: 6em;
-    background:none;
+    background:n2;
     width: 90%;
     margin: auto;
     padding-left: 0em;
   }
-  .sectionOne .leftSect h1{
+  .section2 .leftSect h1{
     padding-left: 0.4em;
     font-size: 70px;
     text-align: center;
   }
-  .sectionOne .leftSect h2{
+  .section2 .leftSect h2{
     font-size: 30px;
     padding-left: 1em;
     text-align: center;
   }
-  .sectionOne .leftSect h3{
+  .section2 .leftSect h3{
     text-align: center;
     font-size: 14px;
   }
 
-  .sectionOne .leftSect button{
+  .section2 .leftSect button{
     margin-bottom: 0.5em;
     margin-left: 35%;
   }
-  .sectionOne .leftSect button:hover{
+  .section2 .leftSect button:hover{
     transform: translateY(0deg);
     background-color: var(--lightGreen);
   }
@@ -506,13 +648,14 @@ body {
 
 
 
-  .sectionTwo{
+  .section3{
     display: block;
     padding: 2em;
     margin: auto;
     width: 95%;
+    margin-top: 10em;
   }
-  .sectionTwo .container{
+  .section3 .container{
       background-color: #fff;
       width: 17em;
       height: 18rem;
@@ -522,54 +665,54 @@ body {
       margin-top: 2em;
 
   }
-  .sectionTwo .container h1{
+  .section3 .container h1{
     font-size: 18px;
     padding: 0.5em;
     padding-top: 1em;
   }
-  .sectionTwo .container h2{
+  .section3 .container h2{
     font-family: 'Calibri Light';
     font-size: 14px;
     padding-left: 1em;
     padding-right: 0.5em;
   }
 
-  .sectionTwo .container1{
+  .section3 .container1{
       margin-top: 2em;
       width: 17em;
       height: 18rem;
       border-radius: 0.3em;
   }
-  .sectionTwo .container .img{
-    background: none;
+  .section3 .container .img{
+    background: n2;
     width: 70%;
     margin: auto;
   }
 
-  .sectionTwo .container .img img{
+  .section3 .container .img img{
     width: 180px;
   }
 
-  .sectionTwo .container1 .img{
-    background: none;
+  .section3 .container1 .img{
+    background: n2;
     width: 70%;
     margin: auto;
   }
-  .sectionTwo .container1 h1{
+  .section3 .container1 h1{
     font-size: 18px;
     padding: 0.5em;
     font: bold;
   }
-  .sectionTwo .container1 h2{
+  .section3 .container1 h2{
     font-size: 14px;
     padding-left: 1em;
     padding-right: 0.5em;
   }
 
-  .sectionTwo .container1 .img img{
+  .section3 .container1 .img img{
     width: 180px;
   }
-  .sectionTwo .container1 .img #imgSize{
+  .section3 .container1 .img #imgSize{
     width: 150px;
   }
 

@@ -18,6 +18,15 @@ const navLinks = document.querySelector('.navLinks')
 menuBtn.addEventListener('click', () => {
       navLinks.classList.toggle('active')
 })
+
+
+// let changeImg = document.querySelector('#images')
+// let images = ['img1.png', 'img2.png', 'img3.png', 'img4.png', 'img5.png', 'img6.png']
+
+// setInterval(() => {
+//       let random = Math.floor(Math.random() * 6)
+//       changeImg.src = `/assets/img${[random]}.png`;
+// }, 3000)
 // const changeImg = document.querySelector('.changeImg')
 
 // const cImg = function (src, time) {
@@ -33,6 +42,7 @@ menuBtn.addEventListener('click', () => {
 // cImg(`/assets/img4.png`, 9000)
 // cImg(`/assets/img5.png`, 12000)
 // cImg(`/assets/img6.png`, 15000)
+
 
 
 
