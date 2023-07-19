@@ -494,6 +494,7 @@ body {
     transition: var(--transition);
     margin: auto;
     backdrop-filter: blur(10px);
+    height: auto;
   }
   .navBar .menu img{
     display: block;
@@ -501,13 +502,16 @@ body {
   }
   .navBar .navLinks {
     background: none;
-    margin-left: 5em;
-    transform: translateY(-200%);
+    margin-top: -200%;
     display: block;
+    background:none;
     transition: all 0.5s;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0;
   }
   .navBar .navLinks .links {
-    margin: 0;
+    margin: auto;
   }
   .navBar .navLinks .links li {
     display: block;
@@ -548,6 +552,9 @@ body {
     background-color:  var(--secondDarkColor) ;
     padding: 0.7em;
   }
+  .account{
+    padding-left: 6.5em;
+  }
   .navBar .navLinks .account{
     margin-top: 1em;
   }
@@ -578,7 +585,7 @@ body {
   }
   .navBar .navLinks .account .acctContents.active ol {
     margin-left: -0.2em;
-    /* position: relative; */
+    position: relative;
     margin-bottom: 1em;
   }
   .navBar .navLinks .account .acctContents.active ol li {
@@ -591,7 +598,7 @@ body {
   .navBar .navLinks.active{
     background: none;
     display: block;
-    transform: none;
+    margin: 0;
   }
 
 
