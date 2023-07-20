@@ -16,6 +16,8 @@ span{
   --backgroundColor: rgb(0, 4, 8);
   --secondDarkColor: #111111;
   --shadow: 0px 0px 8px 1px rgb(168, 168, 168);
+  --dropDownContentsColor:#333333;
+  --buttonHoverColor: #00be7f;
   --containerColor: #27272744;
   --textHeaderColor: #d3d3d3;
   --normalTextColor: #acacac;
@@ -48,29 +50,28 @@ body {
 }
 .navBar .logo img {
   width: 80px;
-  margin-right: 16em;
+  margin-right: 11em;
+  padding: 0.1em;
 }
 .navBar .navLinks {
   background: none;
   margin: auto;
-  margin-left: 5em;
   margin-top: 1em;
   display: flex;
 }
 .navBar .navLinks .links {
-  /* display: flex; */
   list-style: none;
   padding-top: 0em;
-  margin-left: 10em;
+  margin-left: 15em;
 }
 .navBar .navLinks .links li {
   display: inline-block;
   padding-top: 0.5em;
+  font-size: 17px;
 
 }
 
 .navBar .navLinks .links a {
-  font-size: 17px;
   text-decoration: none;
   color: rgb(209, 209, 209);
   transition: all 0.5s;
@@ -81,51 +82,127 @@ body {
   padding: 0.4em;
   padding-left: 0.7em;
   padding-right: 0.7em;
+  border-radius: 0.3em;
 }
 .navBar .navLinks .links li{
   margin: auto;
   margin-left: 1em;
-  border-radius: 0.2em;
+  border-radius: 0.3em;
   transition: var(--transition);
   padding: 0.7em;
 }
 .navBar .navLinks .links li:hover{
   transition: var(--transition);
+}
+.navBar .navLinks .links a:hover {
+  color: #000000;
+  transition: all 0.5s;
+  background-color:  #00be7f;
+}
+#targetLink{
+  border-radius: 0.3em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  color: #000000;
+  transition: all 0.5s;
+  background-color: var(--buttonHoverColor);
+  border-radius: 0.3em;
+}
+#targetLink:hover{
+  background-color: #017c53
+}
+#companyLink{
+  cursor: pointer;
+  color: rgb(209, 209, 209);
+  transition: all 0.5s;
+  font-family: var(--font4);
+  font-weight: 400;
+  text-align: center;
   padding: 0.4em;
   padding-left: 0.7em;
   padding-right: 0.7em;
+  border-radius: 0.3em;
+}
+.navLinks .company{
+  background:#333333;
+  padding: 0.2em;
+  border-radius: 0.4em;
+  position: absolute;
+  margin-left: 37.5em;
+  margin-top: 3em;
+  opacity: 0;
+  transition: var(--transition);
+  width: 8em;
 
 }
-.navBar .navLinks .links a:hover {
-  color: #00be7f;
-  transition: all 0.5s;
-  background-color: var(--secondDarkColor) ;
-  border-radius: 0.3em;
+.navLinks .links #whiteArrow{
+  width: 11px;
+  margin-left: 0.5em;
+  transform: rotate(180deg);
+  transition: var(--transition);
+  cursor: pointer;
 }
-#targetLink{
-  color: #00be7f;
-  transition: all 0.5s;
-  background-color:  var(--secondDarkColor) ;
-  border-radius: 0.3em;
-  padding-left: 0.7em;
-  padding-right: 0.7em;
+.navLinks .company.active{
+  opacity: 1;
+  transition: var(--transition);
 }
+.navLinks .links #whiteArrow.active{
+  transform: rotate(0deg);
+  transition: var(--transition);
+}
+
+.navLinks .company ol li{
+  font-family: var(--font4);
+  font-size: 17px;
+  list-style: none;
+  line-height: 1.8em;
+  background: #1a1a1a7c;
+  padding: 0.3em;
+  cursor: pointer;
+}
+.navLinks .company ol li:hover{
+  background-color: var(--buttonHoverColor);
+}
+.navLinks .company ol li a{
+  text-decoration: none;
+  padding: 0.4em;
+  color: #fff;
+}
+
+
+
+
+
+
+
+
 .navBar .navLinks .account {
-  margin-left: 9em;
+  margin-left: 0em;
+  display: none;
 }
-.navBar .navLinks .account #acctBtn {
-  background: var(--backgroundColor);
+
+
+.navBar .navLinks .account1 {
+  margin-left: 3em;
+  display: flex;
+}
+.navBar .navLinks .account1 button {
+  background: var(--lightGreen);
   border: 2px solid #333333;
   font-size: 17px;
   padding-top: 0.1em;
   transition: var(--transition);
   margin-bottom: 0.5em;
-  width: 5em;
-  border-radius: 1em;
+  width: 6em;
+  border-radius: 0.5em;
   height: 48px;
   cursor: pointer;
+}
+.navBar .navLinks .account1 ol{
   display: flex;
-  /* box-shadow: var(--shadow); */
+}
+.navBar .navLinks .account1 ol li{
+  list-style: none;
 }
 .navBar .navLinks .account #acctImg{
   width: 40px;
@@ -133,7 +210,7 @@ body {
 .navBar .navLinks .account #acctBtn #arrDwn {
   margin-top: 0.7em;
   width: 20px;
-  margin-left: 0.6em;
+  margin-left: 1.4em;
   transform: rotate(180deg);
   transition: var(--transition);
   
@@ -148,38 +225,39 @@ body {
 }
 .navBar .navLinks .account .acctContents.active ol {
   position: absolute;
-  background: var(--backgroundColor);
-  backdrop-filter: blur(6px);
+  background: var(--dropDownContentsColor);
   border-radius: 0.4em;
-  border: 2px solid #333333;;
+  border: 2px solid #333333;
   width: 8em;
-  padding: 0.4em;
+  padding: 0.1em;
   box-shadow: none;
+  margin-left: -0.7em;
 }
 .navBar .navLinks .account .acctContents.active ol li {
   list-style: none;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
 }
-.navBar .navLinks .account .acctContents.active ol li a button{
+.navBar .navLinks .account1 ol button{
+  background-color:#00be7f;
   text-decoration: none;
-  color: #cecece;
   font-size: 17px;
   font-family: var(--font5);
-  background-color: var(--secondDarkColor);
   border: none;
   padding: 0.4em;
-  width: 100%;
+  width: 4.5em;
   cursor: pointer;
-  /* transition: var(--transition); */
   border-radius: 0.3em;
+  color: #000;
+  height: 2.5rem;
 }
-.navBar .navLinks .account .acctContents.active ol li a button:hover {
-  background-color: #0f0f0f;
-  /* transition: var(--transition); */
-}
-.navBar .navLinks .account .acctContents.active ol #li1 {
-  border: none;
+
+.navBar .navLinks .account1 ol #li1 a button {
+  border: 1.5px solid #00be7f;
+  margin-right: 0.7em;
+  background: none;
+  color: #fff;
+  
 }
 .navBar .navLinks .account .acctContents {
   opacity: 0;
@@ -204,6 +282,7 @@ body {
   font-size: 17px;
 }
 
+
 .navBar .navLinks .account .acctContents ol #li1 {
   border: 1px solid var(--lightGreen);
   border-top: none;
@@ -219,14 +298,12 @@ body {
 
 
 .section1{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   background-color: #f5f5ff;
   width: 100%;
-  height: 38em;
+  height: 39em;
   background-size: cover;
   background-repeat: no-repeat;
-  border-bottom-left-radius: 100%;
+  border-bottom-left-radius: 60%;
   border-bottom-right-radius:10%;
   animation: imgShow 20s infinite;
 
@@ -248,64 +325,67 @@ body {
     background-image: url(/assets/woman_with_laptop-img5.jpg);
   }
 }
-.section1 .rightSection{
+.section1  {
   padding-top: 8em;
 }
-.section1 .rightSection img{
-  width: 550px;
-  margin-left: 4em;
-}
-.section1 .leftSection{
-  padding-top: 9em;
+.section1  {
+  padding-top: 7em;
 }
 .text{
-  background-color: #ffffff;
-  /* border: 5px solid #f5f5ff; */
-  /* box-shadow: var(--shadow); */
+  background:none;
   margin: auto;
-  width: 25em;
-  padding: 1em;
-  border-radius: 1em;
+  width: 37em;
+  padding: 0em;
+  border-radius: 0.3em;
+  background: none;
 }
-.section1 .leftSection h1{
-  margin-top: 1em;
+.text .img{
+  width: 4em;
+  margin: auto;
+  margin-top: -2em;
+  background: none;
+}
+.text .img img{
+  width: 100px;
+  
+}
+.section1 h1{
+  margin-top: 0.1em;
   font-family: var(--font3);
-  font-size: 25px;
-  color: #000;
-  padding-bottom: 0.5em;
+  font-size: 30px;
+  color: #ffffff;
+  padding-bottom: 0.2em;
   text-align: center;
   /* background-color: #9bffa844; */
   padding: 0.5em;
-  border-radius: 2em;
+  border-radius: 1em;
   /* width: 90%; */
 
 }
-.section1 .leftSection h1 span{
-  color: rgb(255, 0, 0);
-}
-.section1 .leftSection h3{
+.section1   h3{
   font-family: var(--font5);
   line-height: 1.5em;
   padding: 0.5em;
   text-align: center;
-  color: #1a1a1a;
+  color: #7a7a7a;
 }
-.section1 .leftSection button{
+.section1 button{
   font-size: 19px;
   padding: 0.5em;
-  background:none;
-  border: 2px solid var(--lightGreen);
+  background: var(--lightGreen);
+  border: none;
+  font-family: var(--font4);
   cursor: pointer;
   transition: var(--transition);
   border-radius: 0.4em;
-
   margin-top: 2em;
 }
 
-.section1 .leftSection button:hover{
+.section1 button:hover{
+  opacity: 0.5;
   transform: translateY(-0.3em);
 }
-.section1 .leftSection button:hover{
+.section1   button:hover{
   transition: var(--transition);
   background-color: var(--lightGreen);
 }
@@ -313,6 +393,118 @@ body {
   width: 7em;
   margin: auto;
 }
+.transaction{
+  background: none;
+  width: 30em;
+  border-radius: 0.2em;
+  margin-left: 2em;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto;
+}
+.transaction .first{
+  display: flex;
+  border: 1px solid var(--lightGreen);
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+.transaction .first img{
+  width: 70px;
+}
+.transaction .first h1{
+  margin-left: 0;
+  color: #ffffff;
+  line-height: 0.5em;
+  padding-top: 0.9em;
+}
+.transaction .first h1 span{
+  color: #cecece;
+  font-size: 14px;
+}
+.transaction .second{
+  border: 1px solid var(--lightGreen);
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+.transaction .second h1{
+  margin-left: 0;
+  color: #ffffff;
+  line-height: 0.5em;
+  padding-top: 0.9em;
+}
+.transaction .second h1 span{
+  color: #cecece;
+  font-size: 14px;
+}
+
+.transaction .rate{
+  display: flex;
+}
+.transaction .rate h4{
+  color: #cecece;
+  font-size: 14px;
+  padding-top: 1.4em;
+}
+.transaction .rate img{
+  width: 80px;
+  padding-top: -1em;
+}
+
+.steps{
+  display: flex;
+  margin: auto;
+  width: 70%;
+  background:none;
+  margin-top: 8em;
+  padding: 1em;
+  background:none;
+  border-radius: 0.4em;
+
+}
+.steps h1{
+  padding-top: 1.5em;
+}
+.steps h3{
+  color: #e6e6e6;
+  text-align: center;
+}
+.steps h4{
+  color: #929292;
+  text-align: center;
+  font-size: 15px;
+}
+.steps h2{
+  color: #ffffff;
+  padding: 0.4em;
+  border-radius: 4em;
+  border: 4px solid var(--lightGreen);
+  width: 2.2em;
+  margin: auto;
+  text-align: center;
+  background-color: #00ffaa09;
+}
+.steps #one{
+  color: red;
+  font-size: 22px;
+}
+.steps #two{
+  color: yellow;
+  font-size: 22px;
+}
+.steps #three{
+  color: green;
+  font-size: 22px;
+}
+.steps img{
+  width: 70px;
+  padding-top: 3em;
+}
+
+
+
 
 
 .section2{
@@ -383,7 +575,7 @@ body {
   margin: auto;
   width: 95%;
   background: none;
-  margin-top: 10em;
+  margin-top: 25em;
 }
 .section3 .container{
     background-color: var(--containerColor);
@@ -463,19 +655,19 @@ body {
 
 
 #depositeImg{
-  width: 220px;
+  width: 190px;
   margin-left: 1em;
 }
 #withdrawImg{
-  width: 180px;
+  width: 150px;
   margin-left: 3em;
 }
 #transferImg{
-  width: 180px;
+  width: 150px;
   margin-left: 3em;
 }
 #earnImg{
-  width: 250px;
+  width: 210px;
   margin-left: 0em;
   margin-top: -2em;
 }
@@ -522,7 +714,6 @@ body {
   .navBar .navLinks .links a {
     font-size: 17px;
     font-weight: 400;
-    /* padding-left: 3em; */
     text-align: center;
     padding: 0;
   }
@@ -552,54 +743,124 @@ body {
     background-color:  var(--secondDarkColor) ;
     padding: 0.7em;
   }
+  .navLinks .company{
+    padding: 0.2em;
+    position: relative;
+    margin-left: 4.5em;
+    margin-top: 0em;
+    display: none;
+    transition: var(--transition);
+
+  }
+  .navLinks .company.active{
+    display: block;
+  }
+
+  .navLinks .company ol li{
+    line-height: 1.5em;
+    background: var(--containerColor);
+  }
+  .navLinks .company ol li:hover{
+    background-color: var(--buttonHoverColor);
+  }
+
+
+
+
+  .navBar .navLinks .account1{
+    display: none;
+  }
   .account{
-    padding-left: 6.5em;
+      padding-left: 4.8em;
+      width: 2em;
   }
-  .navBar .navLinks .account{
-    margin-top: 1em;
-  }
-  .navBar .logo img {
-    width: 70px;
-  }
-  .navBar .navLinks .account {
-    margin-left: 0em;
+  .navBar .navLinks.active{
+    background: none;
+    display: block;
+    margin: 0;
   }
   .navBar .navLinks .account #acctBtn {
+    margin-left: 0em;
+    background: var(--containerColor);
+    border: 2px solid #333333;
     font-size: 17px;
+    padding-top: 0.1em;
+    transition: var(--transition);
+    border-radius: 1em;
+    cursor: pointer;
+    display: flex;
     margin-bottom: 0.5em;
     width: 7em;
     height: 47px;
-    margin-left: 0em;
+
   }
   .navBar .navLinks .account #acctImg{
     width: 40px;
   }
   .navBar .navLinks .account #acctBtn #arrDwn {
     margin-top: 0.7em;
-    padding: 0;
     width: 20px;
     margin-left: 2.3em;
     transform: rotate(180deg);
     transition: var(--transition);
     
   }
+  .navBar .navLinks .account #acctBtn #arrDwn.active {
+    transform: rotate(0deg);
+    transition: var(--transition);
+  }
+  .navBar .navLinks .account .acctContents.active {
+    transition: var(--transition);
+    opacity: 1;
+  }
   .navBar .navLinks .account .acctContents.active ol {
+    position: absolute;
+    background: var(--dropDownContentsColor);
+    border-radius: 0.4em;
+    border: 2px solid #333333;
+    width: 8em;
+    padding: 0.1em;
+    box-shadow: none;
     margin-left: -0.2em;
     position: relative;
     margin-bottom: 1em;
   }
-  .navBar .navLinks .account .acctContents.active ol li {
+  .navBar .navLinks .account .acctContents ol li {
     list-style: none;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
   }
-
-
-  .navBar .navLinks.active{
-    background: none;
-    display: block;
-    margin: 0;
+  .navBar .navLinks .account .acctContents.active ol li a button{
+    text-decoration: none;
+    color: #cecece;
+    font-size: 17px;
+    font-family: var(--font5);
+    background: var(--backgroundColor);
+    border: none;
+    padding: 0.4em;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0.3em;
   }
+
+  .navBar .navLinks .account .acctContents.active ol #li1 {
+    border: none;
+  }
+  .navBar .navLinks .account .acctContents {
+    opacity: 0;
+  }
+
+
+  .navBar .navLinks .account{
+    margin-top: 1em;
+    display: block;
+  }
+  .navBar .logo img {
+    width: 70px;
+  }
+
+
+
 
 
   .section1{
@@ -614,20 +875,13 @@ body {
     border-bottom-right-radius:10%;
 
   }
-  .section1 .leftSection{
-    margin-top: -3em;
-  }
-  .section1 .rightSection img{
-    width: 450px;
-    margin-left: 0em;
-  }
 
   .text{
     width: 15em;
     padding: 0.5em;
     border-radius: 0.5em;
   }
-  .section1 .leftSection h1{
+  .section1   h1{
     margin-top: 0.4em;
     font-size: 20px;
     color: #000;
@@ -637,10 +891,10 @@ body {
     /* width: 90%; */
 
   }
-  .section1 .leftSection h1 span{
+  .section1   h1 span{
     color: rgb(255, 0, 0);
   }
-  .section1 .leftSection h3{
+  .section1   h3{
     font-family: var(--font5);
     line-height: 1.5em;
     padding: 0.5em;
@@ -648,7 +902,7 @@ body {
     color: #1a1a1a;
     font-size: 14px;
   }
-  .section1 .leftSection button{
+  .section1   button{
     font-size: 12px;
     padding: 0.5em;
     background:none;
@@ -660,10 +914,10 @@ body {
     margin-top: 1em;
   }
 
-  .section1 .leftSection button:hover{
+  .section1   button:hover{
     transform: translateY(-0.3em);
   }
-  .section1 .leftSection button:hover{
+  .section1   button:hover{
     transition: var(--transition);
     background-color: var(--lightGreen);
   }
@@ -671,12 +925,7 @@ body {
     width: 4.5em;
     margin: auto;
   }
-  .rightSection{
-    padding-left: 0.3em;
-    padding-top: 0em;
-    margin-top: -5em;
-  }
-  .section1 .rightSection img{
+  .section1   img{
     width: 300px;
     
   }

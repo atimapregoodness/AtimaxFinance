@@ -19,6 +19,15 @@ menuBtn.addEventListener('click', () => {
       navLinks.classList.toggle('active')
 })
 
+const compLink = document.querySelector('#companyLink')
+const whiteArrow = document.querySelector('#whiteArrow')
+const comp = document.querySelector('.company')
+
+compLink.addEventListener('click', () => {
+      comp.classList.toggle('active')
+      whiteArrow.classList.toggle('active')
+})
+
 
 // let changeImg = document.querySelector('#images')
 // let images = ['img1.png', 'img2.png', 'img3.png', 'img4.png', 'img5.png', 'img6.png']
