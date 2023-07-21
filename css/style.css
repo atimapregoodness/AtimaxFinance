@@ -860,16 +860,16 @@ body {
     background:none;
     transition: all 0.5s;
     width: 100%;
-    margin-left: 0;
-    padding-top: 0;
+    padding: 0;
   }
   .navBar .navLinks .links {
     margin: auto;
+    width: fit-content;
+    padding-left: 2em;
   }
   .navBar .navLinks .links li {
     display: block;
     padding-top: 0.5em;
-
   }
 
   .navBar .navLinks .links a {
@@ -907,7 +907,7 @@ body {
   .navLinks .company{
     padding: 0.2em;
     position: relative;
-    margin-left: 4.5em;
+    margin-left: 6.5em;
     margin-top: 0em;
     display: none;
     transition: var(--transition);
@@ -932,7 +932,7 @@ body {
     display: none;
   }
   .account{
-      padding-left: 4.8em;
+      padding-left: 7em;
       width: 2em;
   }
   .navBar .navLinks.active{
