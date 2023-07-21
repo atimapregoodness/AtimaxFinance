@@ -48,7 +48,7 @@ body {
 }
 
 .revealRight{
-  transform: translateX(-30em);
+  transform: translateX(-15em);
   opacity: 0;
   transition: all 3s;
 }
@@ -397,11 +397,12 @@ body {
 .section1{
   background-color: #f5f5ff;
   width: 100%;
-  height: 39em;
+  height: 41em;
+  padding-top: 6em;
   background-size: cover;
   background-repeat: no-repeat;
-  border-bottom-left-radius: 60%;
-  border-bottom-right-radius:10%;
+  /* border-bottom-left-radius: 60%;
+  border-bottom-right-radius:10%; */
   animation: imgShow 20s infinite;
 
 }
@@ -455,7 +456,6 @@ body {
   text-align: center;
   padding: 0.5em;
   border-radius: 1em;
-  /* width: 90%; */
 
 }
 .section1   h3{
@@ -513,8 +513,8 @@ body {
   margin-left: 0;
   color: #ffffff;
   line-height: 0.5em;
-  padding-top: 0.9em;
-  font-size: 25px;
+  padding-top: 0.7em;
+  font-size: 30px;
 }
 .transaction .first h1 span{
   color: #cecece;
@@ -555,13 +555,13 @@ body {
 }
 
 .steps{
+  background-color: var(--containerColor);
+  border: 1px solid #ffffff13;
   display: flex;
   margin: auto;
-  width: 90%;
-  background:none;
-  margin-top: 8em;
-  padding: 4em;
-  background:none;
+  margin-top: 10em ;
+  width: fit-content;
+  padding: 2em;
   border-radius: 0.4em;
 
 }
@@ -621,7 +621,7 @@ body {
 
 
 .section2{
-  margin-top: 2em;
+  margin-top: 0em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: none;
@@ -799,7 +799,7 @@ body {
   .popup .container{
     border-radius: 0.5em;
     width: 80%;
-    margin-top: 13%;
+    margin-top: 50%;
     padding: 0.5em;
   }
   .popup .container button{
@@ -1094,6 +1094,7 @@ body {
     padding: 0em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    background: none;
   }
   .transaction .first{
     display: flex;
@@ -1159,6 +1160,7 @@ body {
     padding: 1em;
     background:none;
     border-radius: 0.4em;
+    border: none;
 
   }
   .steps h1{
@@ -1198,15 +1200,21 @@ body {
   }
   .steps img{
     display: none;
+
   }
   .steps .one{
+    margin-top: 1em;
     margin-right: 1em;
+    margin-bottom: 3em;
   }
   .steps .two{
     margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 3em;
   }
   .steps img{
     margin-right: 1em;
+    margin-top: 1em;
   }
 
 
@@ -1254,7 +1262,9 @@ body {
 
 
   .section3{
-    margin-top: 8em;
+    margin-top: 47em;
+    width: 100%;
+    background:none;
   }
   .section3 .reveal{
     grid-template-columns: 1fr;
@@ -1262,6 +1272,7 @@ body {
   .section3 .container{
       width: 14em;
       height: 16rem;
+      margin: auto;
       margin-top: 3em;
 
   }
@@ -1281,6 +1292,7 @@ body {
   .section3 .container1{
       width: 14em;
       height: 16rem;
+      margin: auto;
       margin-top: 3em;
   }
   .section3 .container1 .img{
