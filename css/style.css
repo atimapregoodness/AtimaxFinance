@@ -841,6 +841,14 @@ body {
     backdrop-filter: blur(10px);
     height: auto;
   }
+  .navBar .logo img {
+    width: 80px;
+    margin-right: 17em;
+    padding: 0.1em;
+  }
+  .navBar .logo img {
+    width: 70px;
+  }
   .navBar .menu img{
     display: block;
     cursor: pointer;
@@ -1008,9 +1016,7 @@ body {
     margin-top: 1em;
     display: block;
   }
-  .navBar .logo img {
-    width: 70px;
-  }
+
 
 
 
