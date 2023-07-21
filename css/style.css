@@ -36,6 +36,94 @@ body {
   transition: var(--transition);
 }
 
+.reveal{
+  transform: translateY(15em);
+  opacity: 0;
+  transition: all 3s;
+}
+.reveal.active{
+  transform: none;
+  transition: all 3s;
+  opacity: 1;
+}
+
+.revealRight{
+  transform: translateX(-30em);
+  opacity: 0;
+  transition: all 3s;
+}
+.revealRight.active{
+  transform: none;
+  transition: all 3s;
+  opacity: 1;
+}
+
+
+.popup {
+  transition: all 5s;
+  position: fixed;
+  width: 100%;
+  height: 50em;
+  z-index: 1;
+  backdrop-filter: blur(9px);
+  background-color: #ffffff1f;
+}
+.popup .container{
+  background-color: #111111dc;
+  border-radius: 1em;
+  width: 43%;
+  margin: auto;
+  margin-top: 15%;
+  padding: 1em;
+}
+.popup .container button{
+  border: none;
+  font-size: 20px;
+  font-family: var(--font4);
+  padding: 0.4em;
+  cursor: pointer;
+  margin-top: 2em;
+  width: 6em;
+  border-radius: 0.2em;
+  background-color: #00be7f;
+  transition: var(--transition);
+}
+.popup .container .btn{
+  margin: auto;
+  background:none;
+  width:fit-content;
+}
+.popup .container h1{
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+.popup .container h2{
+  color: #d3d3d3;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1em;
+}
+.popup .container h4{
+  color: #d3d3d3;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.popup .container button:hover{
+  background-color:#006e4a ;
+  transition: var(--transition);
+}
+
+.popOff{
+  display: none;
+}
+
+
+.popup.active{
+  display: none;
+}
 
 
 
@@ -124,15 +212,16 @@ body {
   border-radius: 0.3em;
 }
 .navLinks .company{
-  background:#333333;
+  background:#333333c9;
   padding: 0.2em;
   border-radius: 0.4em;
   position: absolute;
-  margin-left: 37.5em;
+  backdrop-filter: blur(6px);
+  margin-left: 37.2em;
   margin-top: 3em;
   opacity: 0;
   transition: var(--transition);
-  width: 8em;
+  width: 8.6em;
 
 }
 .navLinks .links #whiteArrow{
@@ -153,6 +242,7 @@ body {
 
 .navLinks .company ol li{
   font-family: var(--font4);
+  margin-top: 0.3em;
   font-size: 17px;
   list-style: none;
   line-height: 1.8em;
@@ -162,6 +252,7 @@ body {
 }
 .navLinks .company ol li:hover{
   background-color: var(--buttonHoverColor);
+  border-radius: 0.4em;
 }
 .navLinks .company ol li a{
   text-decoration: none;
@@ -251,6 +342,9 @@ body {
   color: #000;
   height: 2.5rem;
 }
+.navBar .navLinks .account1 ol button:hover{
+  background: #00be7fa1;
+}
 
 .navBar .navLinks .account1 ol #li1 a button {
   border: 1.5px solid #00be7f;
@@ -258,6 +352,9 @@ body {
   background: none;
   color: #fff;
   
+}
+.navBar .navLinks .account1 ol #li1 a button:hover{
+  background-color: #00be7f;
 }
 .navBar .navLinks .account .acctContents {
   opacity: 0;
@@ -352,11 +449,10 @@ body {
 .section1 h1{
   margin-top: 0.1em;
   font-family: var(--font3);
-  font-size: 30px;
+  font-size: 41px;
   color: #ffffff;
   padding-bottom: 0.2em;
   text-align: center;
-  /* background-color: #9bffa844; */
   padding: 0.5em;
   border-radius: 1em;
   /* width: 90%; */
@@ -368,6 +464,7 @@ body {
   padding: 0.5em;
   text-align: center;
   color: #7a7a7a;
+  font-size: 17px;
 }
 .section1 button{
   font-size: 19px;
@@ -378,7 +475,7 @@ body {
   cursor: pointer;
   transition: var(--transition);
   border-radius: 0.4em;
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 
 .section1 button:hover{
@@ -394,14 +491,13 @@ body {
   margin: auto;
 }
 .transaction{
+  margin: auto;
   background: none;
-  width: 30em;
+  width: 32em;
   border-radius: 0.2em;
-  margin-left: 2em;
   padding: 1em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: auto;
 }
 .transaction .first{
   display: flex;
@@ -418,6 +514,7 @@ body {
   color: #ffffff;
   line-height: 0.5em;
   padding-top: 0.9em;
+  font-size: 25px;
 }
 .transaction .first h1 span{
   color: #cecece;
@@ -431,6 +528,7 @@ body {
 }
 .transaction .second h1{
   margin-left: 0;
+  font-size: 25px;
   color: #ffffff;
   line-height: 0.5em;
   padding-top: 0.9em;
@@ -443,33 +541,39 @@ body {
 .transaction .rate{
   display: flex;
 }
+.transaction .rate h1{
+  font-size: 25px;
+}
 .transaction .rate h4{
   color: #cecece;
   font-size: 14px;
-  padding-top: 1.4em;
+  padding-top: 1em;
 }
 .transaction .rate img{
-  width: 80px;
+  width: 70px;
   padding-top: -1em;
 }
 
 .steps{
   display: flex;
   margin: auto;
-  width: 70%;
+  width: 90%;
   background:none;
   margin-top: 8em;
-  padding: 1em;
+  padding: 4em;
   background:none;
   border-radius: 0.4em;
 
 }
 .steps h1{
   padding-top: 1.5em;
+  padding-right: 1.5em;
+  font-size: 30px;
 }
 .steps h3{
   color: #e6e6e6;
   text-align: center;
+  font-size: 15px;
 }
 .steps h4{
   color: #929292;
@@ -501,6 +605,15 @@ body {
 .steps img{
   width: 70px;
   padding-top: 3em;
+}
+.steps .one{
+  margin-right: 1em;
+}
+.steps .two{
+  margin-right: 1em;
+}
+.steps img{
+  margin-right: 1em;
 }
 
 
@@ -568,7 +681,7 @@ body {
 
 
 /* section 2 */
-.section3{
+.section3 .reveal{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 2em;
@@ -680,6 +793,46 @@ body {
 
 
 @media only screen and (max-width: 900px){
+  .popup {
+    height: 100em;
+  }
+  .popup .container{
+    border-radius: 0.5em;
+    width: 80%;
+    margin-top: 13%;
+    padding: 0.5em;
+  }
+  .popup .container button{
+    margin-top: 1em;
+    width: 6em;
+    font-size: 15px;
+  }
+  .popup .container h1{
+    font-size: 15px;
+    text-align: center;
+  }
+  .popup .container h2{
+    font-size: 13px;
+  }
+  .popup .container h4{
+    color: #d3d3d3;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .popup .container button:hover{
+    background-color:#006e4a ;
+    transition: var(--transition);
+  }
+
+  .popOff{
+    display: none;
+  }
+
+
+  .popup.active{
+    display: none;
+  }
   .navBar{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -972,10 +1125,11 @@ body {
   }
 
 
-
   .section3{
-    grid-template-columns: 1fr;
     margin-top: 8em;
+  }
+  .section3 .reveal{
+    grid-template-columns: 1fr;
   }
   .section3 .container{
       width: 14em;

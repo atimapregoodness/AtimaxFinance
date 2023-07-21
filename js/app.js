@@ -1,3 +1,4 @@
+
 const acctBtn = document.querySelector('#acctBtn')
 const acctCont = document.querySelector('.acctContents')
 const arrDwn = document.querySelector('#arrDwn')
@@ -8,6 +9,11 @@ acctBtn.addEventListener('click', () => {
       arrDwn.classList.toggle('active')
 
 })
+// document.querySelectorAll('.navLinks li').forEach(n => n.addEventListener('click', () => {
+//       acctCont.classList.remove('active')
+//       arrDwn.classList.remove('active')
+// }))
+
 body.addEventListener('click', () => {
       acctCont.className.remove('active')
 })
@@ -27,6 +33,55 @@ compLink.addEventListener('click', () => {
       comp.classList.toggle('active')
       whiteArrow.classList.toggle('active')
 })
+
+
+const popOff = document.querySelector('.popOff')
+const popUp = document.querySelector('.popup')
+const continueBtn = document.querySelector('#continueBtn')
+
+setTimeout(() => {
+      popOff.className = 'popup';
+}, 3000);
+continueBtn.addEventListener('click', () => {
+      popOff.className = 'popOff';
+})
+
+
+window.addEventListener('scroll', reveal)
+function reveal() {
+      var reveals = document.querySelectorAll('.reveal')
+
+      for (var i = 0; i < reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 150;
+
+            if (revealTop < windowheight - revealPoint) {
+                  reveals[i].classList.add('active')
+            }
+            else {
+                  reveals[i].classList.remove('active')
+            }
+      }
+}
+
+window.addEventListener('scroll', revealRight)
+function revealRight() {
+var reveals = document.querySelectorAll('.revealRight')
+      for (var i = 0; i < reveals.length; i++){
+            var windowheight = window.innerHeight;
+            var revealTop = reveals[i].getBoundingClientRect().top;
+            var revealPoint = 150;
+
+            if (revealTop < windowheight - revealPoint) {
+                  reveals[i].classList.add('active')
+            }
+            else {
+                  reveals[i].classList.remove('active')
+            }
+      }
+}
+
 
 
 // let changeImg = document.querySelector('#images')
