@@ -9,10 +9,10 @@ acctBtn.addEventListener('click', () => {
       arrDwn.classList.toggle('active')
 
 })
-// document.querySelectorAll('.navLinks li').forEach(n => n.addEventListener('click', () => {
-//       acctCont.classList.remove('active')
-//       arrDwn.classList.remove('active')
-// }))
+document.querySelectorAll('.navLinks li').forEach(n => n.addEventListener('click', () => {
+      acctCont.classList.remove('active')
+      arrDwn.classList.remove('active')
+}))
 
 body.addEventListener('click', () => {
       acctCont.className.remove('active')
@@ -54,7 +54,7 @@ function reveal() {
       for (var i = 0; i < reveals.length; i++){
             var windowheight = window.innerHeight;
             var revealTop = reveals[i].getBoundingClientRect().top;
-            var revealPoint = 150;
+            var revealPoint = 100;
 
             if (revealTop < windowheight - revealPoint) {
                   reveals[i].classList.add('active')
@@ -71,7 +71,7 @@ var reveals = document.querySelectorAll('.revealRight')
       for (var i = 0; i < reveals.length; i++){
             var windowheight = window.innerHeight;
             var revealTop = reveals[i].getBoundingClientRect().top;
-            var revealPoint = 150;
+            var revealPoint = 100;
 
             if (revealTop < windowheight - revealPoint) {
                   reveals[i].classList.add('active')
