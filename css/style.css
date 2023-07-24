@@ -1606,15 +1606,17 @@ body {
 
   .security{
     margin-top: 6em;
-    padding: 1em;
+    padding: 0em;
     grid-template-columns: 1fr;
     background: none;
     width: 90%;
     margin: auto;
+    margin-left: 0;
   }
 
   .security .revealRight{
     padding-left: 0em;
+    margin: 0;
   }
 
   .security h1{
