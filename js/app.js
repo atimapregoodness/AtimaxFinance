@@ -41,7 +41,7 @@ const continueBtn = document.querySelector('#continueBtn')
 
 setTimeout(() => {
       popOff.className = 'popup';
-}, 3000);
+}, 6000);
 continueBtn.addEventListener('click', () => {
       popOff.className = 'popOff';
 })
@@ -81,6 +81,13 @@ var reveals = document.querySelectorAll('.revealRight')
             }
       }
 }
+
+// var typed = new Typed('#autoType', {
+//       strings: ['Saving and Earning made easy', "Enjoy Referral Bonuses", "this is a boy"],
+//       typeSpeed: 100,
+//       backSpeed: 80,
+//       loop: true,
+// })
 
 
 
