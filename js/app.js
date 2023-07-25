@@ -1,3 +1,7 @@
+//navBar transition
+
+
+
 
 const acctBtn = document.querySelector('#acctBtn')
 const acctCont = document.querySelector('.acctContents')
@@ -81,6 +85,25 @@ var reveals = document.querySelectorAll('.revealRight')
             }
       }
 }
+// let lastScroll = 0;
+// const nav = document.querySelector('.navBar')
+// window.addEventListener('scroll', () => {
+//       const currentScroll = window.pageYOffset;
+//       if (currentScroll <= 0) {
+//             body.classList.remove('scrollUp')
+//       }
+//       if (currentScroll >= lastScroll && !body.classList.contains('scrollDown')) {
+//             body.classList.remove('scrollUp')
+//             body.classList.add('scrollDown')
+//       }
+//       if (currentScroll <= lastScroll && body.classList.contains('scrollDown')) {
+//             body.classList.add('scrollUp')
+//             body.classList.remove('scrollDown')
+//       }
+
+//       lastScroll = currentScroll;
+
+// })
 
 // var typed = new Typed('#autoType', {
 //       strings: ['Saving and Earning made easy', "Enjoy Referral Bonuses", "this is a boy"],

@@ -41,22 +41,26 @@ body {
   transform: translateY(15em);
   opacity: 0;
   transition: all 3s;
+  z-index: -1;
 }
 .reveal.active{
   transform: none;
   transition: all 3s;
   opacity: 1;
+  z-index: -1;
 }
 
 .revealRight{
   transform: translateX(-5em);
   opacity: 0;
   transition: all 3s;
+  z-index: -1;
 }
 .revealRight.active{
   transform: none;
   transition: all 3s;
   opacity: 1;
+  z-index: -1;
 }
 
 
@@ -65,7 +69,7 @@ body {
   position: fixed;
   width: 100%;
   height: 50em;
-  z-index: 1;
+  z-index: 9999;
   backdrop-filter: blur(22px);
   background-color: #ffffff1f;
 }
@@ -126,22 +130,28 @@ body {
   display: none;
 }
 
-
+.scrollDown .navBar{
+  transform: translate3d(0, -100%, 0);
+}
+.scrollUp .navBar{
+ 
+}
 
 .navBar {
   background-color: rgba(0, 4, 8, 0);
+  background: transparent;
   backdrop-filter: blur(6px);
   display: inline-flex;
   position: fixed;
   width: 100%;
   height: auto;
-  transition: var(--transition);
-  z-index: 1;
+  transition: all 320ms ease-in-out;
+  z-index: 3;
 }
 .navBar .logo img {
-  width: 80px;
-  margin-right: 11em;
-  padding: 0.1em;
+  width: 170px;
+  margin-right: 10em;
+  padding: 0.3em;
 }
 .navBar .navLinks {
   background: none;
@@ -397,21 +407,20 @@ body {
 
 
 .section1{
-  background-color: #f5f5ff;
+  background-color: var(--backgroundColor);
   width: 100%;
-  height: 40em;
+  height: 44em;
   padding-top: 6em;
   background-size: cover;
   background-repeat: no-repeat;
-  border-bottom-left-radius: 70%;
-  border-bottom-right-radius: 20%;
   animation: imgShow 20s infinite;
-  border: 3px solid #006e4a;
+  /* border: 3px solid #006e4a;
   border-top: none;
   border-left: none;
-  border-right: none;
+  border-right: none; */
+  border: none;
+  z-index: -1;
 
-  
 
 }
 @keyframes imgShow {
@@ -440,7 +449,7 @@ body {
 .text{
   background:none;
   margin: auto;
-  width: 37em;
+  width: 50em;
   padding: 0em;
   border-radius: 0.3em;
   background: none;
@@ -464,6 +473,7 @@ body {
   text-align: center;
   padding: 0.5em;
   border-radius: 1em;
+  font-size: 50px;
 
 }
 .section1   h3{
@@ -567,7 +577,7 @@ body {
   border: 1px solid #ffffff13;
   display: flex;
   margin: auto;
-  margin-top: 10em ;
+  margin-top: 15em ;
   width: fit-content;
   padding: 2em;
   border-radius: 0.4em;
@@ -630,7 +640,7 @@ body {
 .earn{
   margin: auto;
   background: none;
-  margin-top: 40em;
+  margin-top: 30em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 2em;
@@ -670,12 +680,12 @@ body {
 }
 
 .circle1{
-  width: 30em;
-  height: 30rem;
-  background-color: #55ffbe;
+  width: 20em;
+  height: 20rem;
+  background-color: #6bffc6;
   position: relative;
   z-index: -1;
-  top: 70em;
+  top: 30em;
   border-radius: 50%;
   filter: blur(70px);
   opacity: 0.1;
@@ -684,12 +694,12 @@ body {
 .circle2{
   width: 20em;
   height: 20rem;
-  background-color: #55ffbe;
+  background-color: #76ffca;
   position: relative;
   z-index: -1;
   top: 45em;
   border-radius: 50%;
-  filter: blur(70px);
+  filter: blur(100px);
   left: 20em;
   opacity: 0.1;
 }
@@ -864,6 +874,8 @@ body {
 
 
 .virtualCard{
+  width: 90%;
+  margin: auto;
   margin-top: 15em;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -872,16 +884,35 @@ body {
   /* background: var(--lightGreen); */
   /* padding: 2em; */
 }
+.virtualCard .revealRight{
+  padding: 3em;
+}
 .virtualCard .img img{
   width: 450px;
 }
-
+.virtualCard h3{
+  font-size: 20px;
+  padding-top: 0.5em;
+  color: #bbbbbb;
+  line-height: 1.5em;
+}
+.virtualCard h2{
+  font-family: var(--font4);
+  font-size: 30px;
+  color: var(--lightGreen);
+}
+.virtualCard h1{
+  color: #fff;
+  font-size: 40px;
+  font-family: var(--font4);
+  padding-bottom: 2em;
+}
 
 
 .security{
   background: none;
   margin-top: 18em;
-  padding: 1em;
+  padding-top: 5em;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -988,6 +1019,53 @@ body {
 }
 
 
+
+footer{
+  background-color: var(--containerColor);
+  margin-top: 8em;
+  padding: 1em;
+  padding-bottom: 2em;
+}
+footer .footerContents{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-left: 1em;
+}
+
+footer h1{
+  padding-top: 1em;
+  color: #fff;
+  font-family: var(--font4);
+  font-size: 30px;
+}
+
+footer li{
+  list-style: none;
+  line-height: 2.5em;
+  padding-left: 0.5em;
+}
+footer a{
+  text-decoration: none;
+  color: #d6d6d6;
+  font-family: var(--font2);
+  font-size: 17px;
+}
+.copy{
+  display: flex;
+  background-color: var(--backgroundColor);
+  padding: 0.5em;
+}
+.copy img{
+  width: 30px;
+}
+.copy h4{
+  color: #747474;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+}
+.copy .text{
+  display: flex;
+}
 
 
 
@@ -1596,10 +1674,6 @@ body {
     width: 160px;
     margin-left: 1.5em;
     margin-top: -2em;
-  }
-
-  .virtualCard{
-    display: none;
   }
 
 
