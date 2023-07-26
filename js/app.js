@@ -19,7 +19,7 @@ document.querySelectorAll('.navLinks li').forEach(n => n.addEventListener('click
 }))
 
 body.addEventListener('click', () => {
-      acctCont.className.remove('active')
+      acctCont.classList.remove('active')
 })
 
 const menuBtn = document.querySelector('.menu')

@@ -8,8 +8,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;;
+  /* box-sizing: border-box; */
+  font-family: 'Roboto', sans-serif;
 }
 
 span{
@@ -38,7 +38,8 @@ button{
 }
 
 body {
-  box-sizing: border-box;
+  margin: 0;
+  display: block;
   background-color: var(--backgroundColor);
   opacity: 1;
 }
