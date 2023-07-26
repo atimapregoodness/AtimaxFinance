@@ -422,6 +422,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   animation: imgShow 20s infinite;
+  margin: 0;
   /* border: 3px solid #006e4a;
   border-top: none;
   border-left: none;
@@ -448,12 +449,7 @@ body {
     background-image: url(/assets/woman_with_laptop-img5.jpg);
   }
 }
-.section1  {
-  padding-top: 8em;
-}
-.section1  {
-  padding-top: 7em;
-}
+
 .text{
   background:none;
   margin: auto;
@@ -1596,7 +1592,9 @@ footer .footerContents{
     transition: var(--transition);
   }
   .earn img{
-    width: 300px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
   }
 
   .circle1{
