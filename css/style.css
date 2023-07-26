@@ -151,7 +151,7 @@ body {
   display: inline-flex;
   position: fixed;
   width: 100%;
-  border: nnone;
+  border: none;
   height: auto;
   transition: all 320ms ease-in-out;
   z-index: 3;

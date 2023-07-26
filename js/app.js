@@ -45,7 +45,7 @@ const continueBtn = document.querySelector('#continueBtn')
 
 setTimeout(() => {
       popOff.className = 'popup';
-}, 6000);
+}, 7000);
 continueBtn.addEventListener('click', () => {
       popOff.className = 'popOff';
 })
