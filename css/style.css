@@ -1613,7 +1613,7 @@ footer .footerContents{
 
   .section1{
     display: grid;
-    padding-top: 9em;
+    padding-top: 8em;
     grid-template-columns: 1fr;
     background-color: none;
     width: 100%;
@@ -1654,9 +1654,9 @@ footer .footerContents{
   }
   .section1 h1{
     padding-top: 0em;
-    padding-bottom: 0.2em;
+    padding-bottom: 0.5em;
     border-radius: 1em;
-    font-size: 25px;
+    font-size: 35px;
     padding-right: 1em;
     text-align: center;
 
