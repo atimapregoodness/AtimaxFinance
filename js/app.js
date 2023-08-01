@@ -84,6 +84,10 @@ var reveals = document.querySelectorAll('.revealRight')
             }
       }
 }
+const toTopBtn = document.querySelector('#toTopBtn')
+toTopBtn.addEventListener('click', () => {
+      window.location.href = '#top';
+})
 
 const popOff = document.querySelector('.popOff')
 const popUp = document.querySelector('.popup')
@@ -95,6 +99,7 @@ setTimeout(() => {
 continueBtn.addEventListener('click', () => {
       popOff.className = 'popOff';
 })
+
 
 
 
