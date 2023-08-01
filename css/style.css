@@ -1674,16 +1674,16 @@ footer .footerContents{
     font-family: var(--font4);
   }
   .section1 .app{
-    width: 80%;
+    width: 100%;
   }
   .section1 .app .appContainer{
     display: flex;
-    width: 8em;
-    height: 2rem;
+    width: 9em;
+    height: 2.5rem;
     background-color: #fff;
     margin-top: 1em;
     border-radius: 2em;
-    padding: 0.1em;
+    padding: 0.3em;
   }
   .section1 .app img{
     width: 20px;
@@ -2015,7 +2015,8 @@ footer .footerContents{
     margin-top: 1em;
     padding: 0em;
     grid-template-columns: 1fr;
-    margin-left: -1em;
+    margin-left: 0;
+    width: 100%;
   }
 
   .security .main{
@@ -2033,7 +2034,7 @@ footer .footerContents{
     padding-top: 3em;
     color: #fff;
     font-family: var(--font4);
-    font-size: 35px;
+    font-size: 30px;
     padding-bottom: 0em;
     text-align: center;
   }
@@ -2048,10 +2049,14 @@ footer .footerContents{
     padding-top: 0.5em;
     font-family: var(--font4);
   }
+  .security .img{
+    margin: auto;
+    margin-top: -3em;
+  }
   .security img{
-    width: 400px;
+    width: 300px;
     margin-top: 1em;
-    margin-left: -4em;
+    margin-left: 0em;
   }
   .security .container{
     background-color: #ffffff05;
