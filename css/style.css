@@ -1003,7 +1003,7 @@ body {
   font-family: var(--font4);
 }
 .security img{
-  width: 800px;
+  width: 400px;
   margin-top: 1em;
 }
 .security .container{
@@ -1824,17 +1824,18 @@ footer .footerContents{
 
   .earn{
     background: none;
-    margin-top: 85em;
+    margin-top: 95em;
     display: grid;
     grid-template-columns: 1fr;
-    width: 90%;
+    width: 98%;
   }
   .earn .earnText{
     padding-left: 0em;
     text-align: left;
   }
   .earn h1{
-    font-size: 40px;
+    font-size: 52px;
+    padding-bottom: 0.4em;
     padding-right: 1em;
     font-family: var(--font3);
     
@@ -1844,6 +1845,7 @@ footer .footerContents{
   }
   .earn button{
     margin-top: 1em;
+    margin-bottom: 0.4em;
 
   }
   .earn button:hover{
@@ -1851,7 +1853,7 @@ footer .footerContents{
     transition: var(--transition);
   }
   .earn img{
-    width: 250px;
+    width: 300px;
     margin: 0;
     padding: 0;
   }
