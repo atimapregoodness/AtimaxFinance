@@ -1836,7 +1836,7 @@ footer .footerContents{
   .earn h1{
     font-size: 52px;
     padding-bottom: 0.4em;
-    padding-right: 1em;
+    padding-right: 0em;
     font-family: var(--font3);
     
   }
