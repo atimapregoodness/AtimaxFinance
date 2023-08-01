@@ -1471,7 +1471,7 @@ footer .footerContents{
   .navLinks .company{
     padding: 0.2em;
     position: relative;
-    margin-left: 7.5em;
+    margin-left: 6.5em;
     margin-top: 0em;
     display: none;
     transition: var(--transition);
@@ -1496,7 +1496,7 @@ footer .footerContents{
     display: none;
   }
   .account{
-    padding-left: 8em;
+    padding-left: 7em;
   }
   .navLinks.active{
     background: none;
@@ -1504,7 +1504,7 @@ footer .footerContents{
     margin: 0;
   }
   .account #acctBtn {
-    margin-left: 0em;
+    margin-bottom: 0.3em;
     background: var(--containerColor);
     border: 2px solid #333333;
     font-size: 17px;
@@ -1513,7 +1513,7 @@ footer .footerContents{
     border-radius: 1em;
     cursor: pointer;
     display: flex;
-    margin-bottom: 0.5em;
+
     width: 7em;
     height: 47px;
 
