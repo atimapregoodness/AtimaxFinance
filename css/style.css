@@ -2066,7 +2066,7 @@ footer .footerContents{
 
   .help{
     background: none;
-    width: 5%;
+    width: 10%;
 
   }
 
@@ -2075,10 +2075,17 @@ footer .footerContents{
     padding-top: 0em;
     grid-template-columns: 1fr;
     margin-top: 13em;
-    width: 30%;
+    width: 0%;
 
 
   }
+  .help .textContainer{
+    width: 21em;
+    border-radius: 0.3em;
+    margin: auto;
+    padding: 1em;
+  }
+
 
 
   .help h1{
@@ -2114,8 +2121,8 @@ footer .footerContents{
   }
 
   .help .contacts h4{
-    font-size: 15px;
-    color: #e4e4e4;
+    font-size: 11px;
+    color: #9e9e9e;
   }
   .mail{
     margin-top: 0.5em;
@@ -2126,13 +2133,13 @@ footer .footerContents{
   }
   .mail h4{
     color: var(--lightGreen);
-    font-size: 15px;
+    font-size: 11px;
     padding-top: 0.5em;
     padding-left: 1em;
   }
   .mail h4 a{
     text-decoration: none;
-    color: #e4e4e4;
+    color: #9e9e9e;
   }
 
   footer{
