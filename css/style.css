@@ -185,7 +185,7 @@ body {
   width: 200px;
   margin-right: 9em;
   padding-top: 0.6em;
-  padding-left: 2em;
+  padding-left: 3em;
 }
 .navBar .navLinks {
   background: none;
@@ -342,7 +342,6 @@ body {
 .menu img{
   width: 30px;
   margin-top: 1.5em;
-  margin-right: 1em;
   display: none;
   padding: 0;
 }
@@ -1654,7 +1653,7 @@ footer .footerContents{
 
   .navBar .logo img {
     width: 150px;
-    margin-right: 12em;
+    margin-right: 11em;
     padding: 0.3em;
     /* margin: 0.3em; */
     margin-top: 0.5em;
