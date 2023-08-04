@@ -308,61 +308,6 @@ body {
 
 
 
-.navBar .navLinks .account {
-  margin-left: 0em;
-  display: none;
-}
-
-
-.navBar .navLinks .account1 {
-  margin-left: 3em;
-  display: flex;
-}
-.navBar .navLinks .account1 button {
-  background: var(--lightGreen);
-  border: 2px solid #333333;
-  font-size: 17px;
-  padding-top: 0.1em;
-  transition: var(--transition);
-  margin-bottom: 0.5em;
-  width: 6em;
-  border-radius: 0.5em;
-  height: 48px;
-  cursor: pointer;
-}
-.navBar .navLinks .account1 ol{
-  display: flex;
-}
-.navBar .navLinks .account1 ol li{
-  list-style: none;
-}
-.navBar .navLinks .account1 ol button:hover{
-  background: #00be7fa1;
-}
-
-.navBar .navLinks .account1 ol #li1 a button {
-  border: 1.5px solid #00be7f;
-  margin-right: 0.7em;
-  background: none;
-  color: #fff;
-  
-}
-.navBar .navLinks .account1 ol #li1 a button:hover{
-  background-color: #00be7f;
-}
-.navBar .navLinks .account1 ol button{
-  background-color:#00be7f;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: var(--font5);
-  border: none;
-  padding: 0.4em;
-  width: 4.5em;
-  cursor: pointer;
-  border-radius: 0.3em;
-  color: #000;
-  height: 2.5rem;
-}
 .arrowToUp{
   left: 95%;
   opacity: 0;
@@ -400,14 +345,32 @@ body {
   display: none;
   padding: 0;
 }
+.navBar .group{
+  display: flex;
+  background-color: #fff;
+  width: 9em;
+  height: 2.4rem;
+  margin-left: 4em;
+  cursor: pointer;
 
-
+  border-radius: 6em;
+}
+.navBar .group img{
+  width: 40px;
+}
+.navBar .group h1{
+  text-align: left;
+  justify-content: center;
+  padding-top: 0.4em;
+  font-family: var(--font2);
+  font-size: 12px;
+}
 
 .section1{
   margin: 0;
   border: none;
   /* background-color: var(--backgroundColor); */
-  background: linear-gradient(280deg, rgba(0,4,8,1) 20%, var(--lightGreen) 800%);
+  background: linear-gradient(280deg, rgba(0,4,8,1) 20%, var(--lightGreen) 600%);
 
   width: 100%;
   height: 38em;
@@ -422,23 +385,7 @@ body {
 
 
 }
-/* @keyframes imgShow {
-  0%{
-    background-image: url(/assets/woman_with_laptop-img5.jpg);
-  }
-  25%{
-    background-image: url(/assets/woman_with_laptop-img2.jpg);
-  }
-  50%{
-    background-image: url(/assets/woman_with_laptop-img3.jpg);
-  }
-  75%{
-    background-image: url(/assets/woman_with_laptop-img4.jpg);
-  }
-  100%{
-    background-image: url(/assets/woman_with_laptop-img5.jpg);
-  }
-} */
+
 .section1 .contents{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -478,6 +425,7 @@ body {
   padding: 0em;
   border-radius: 0.3em;
   background: none;
+  margin-bottom: -1em;
 }
 
 .section1 h1{
@@ -486,15 +434,20 @@ body {
   padding-top: 1em;
   padding-bottom: 0.2em;
   border-radius: 1em;
-  font-size: 40px;
+  font-size: 50px;
 
 }
-.section1   h3{
+.section1 .text  .h3{
   font-family: var(--font5);
-  line-height: 1.5em;
+  line-height: 1.2em;
   color: #858585;
-  font-size: 14px;
-  padding-right: 8em;
+  font-size: 16px;
+  margin-right: 6em;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  border: 2px solid var(--lightGreen);
+  border-top: none;
+  border-bottom: none;
 }
 .section1 button{
   font-size: 19px;
@@ -1089,6 +1042,62 @@ body {
 }
 
 
+.getApp{
+  background-image: url(/assets/bg4.jpg);
+  background-position: left;
+  padding: 2em;
+  margin: auto;
+  margin-top: 10em;
+  background-color: var(--containerColor);
+  border: var(--bordered);
+  border-radius: 1em;
+  width: 60%;
+}
+.getApp h1{
+  color: #fff;
+  font-family: var(--font1);
+  text-align: center;
+  font-size: 50px;
+}
+.getApp .app{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60%;
+  margin: auto;
+  margin-top: 2em;
+}
+.getApp .appContainer{
+  display: flex;
+  width: 10em;
+  cursor: pointer;
+  height: 2.9rem;
+  background-color: #fff;
+  margin-top: 1em;
+  border-radius: 2em;
+  padding: 0.3em;
+}
+.getApp a{
+  text-decoration: none;
+  color: #000;
+}
+.getApp img{
+  width: 30px;
+  margin-left: 0.3em;
+}
+.getApp .text{
+  padding-left: 0.5em;
+}
+
+.getApp h4{
+  font-family: var(--font4);
+  font-size: 17px;
+}
+.getApp h5{
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
 
 
 
@@ -1096,6 +1105,9 @@ body {
 footer{
   background-color: var(--containerColor);
   margin-top: 8em;
+  background-image: url(/assets/bg7.jpg);
+  /* background-size: cover; */
+  background-position: center;
   padding: 1em;
   padding-bottom: 2em;
 }
@@ -1312,14 +1324,14 @@ footer .footerContents{
   height: 14em;
   border-radius: 0.3em;
   margin-right: 1em;
-  margin-top: 0.2em;
+  margin-top: 0.8em;
 }
 .features2 h1{
   color: var(--lightGreen);
   font-family: var(--font5);
   text-align: center;
   font-size: 30px;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   border-bottom: var(--bordered);
   
 }
@@ -1354,7 +1366,240 @@ footer .footerContents{
   text-align: center;
 
 }
+.loanText{
+  width: 100%;
+  height: 45em;
+  margin: auto;
+  padding-top: 10em;
+  animation: imgShow 10s infinite;
 
+}
+@keyframes imgShow {
+  0%{
+    background-image: url(/assets/woman_with_laptop-img5.jpg);
+  }
+  25%{
+    background-image: url(/assets/woman_with_laptop-img2.jpg);
+  }
+  50%{
+    background-image: url(/assets/woman_with_laptop-img3.jpg);
+  }
+  75%{
+    background-image: url(/assets/woman_with_laptop-img4.jpg);
+  }
+  100%{
+    background-image: url(/assets/woman_with_laptop-img5.jpg);
+  }
+}
+.loanText h1{
+  width: 60%;
+  margin: auto;
+  font-family: var(--font5);
+  color: #fff;
+  font-size: 100px;
+  text-align: center;
+}
+.loanText h2{
+  text-align: center;
+  color: #c5c5c5;
+  font-family: var(--font4);
+  font-size: 20px;
+}
+
+.loanApply{
+  width: 95%;
+  padding-top: 7em;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.loanApply .container1{
+  width: 80%;
+}
+
+
+.loanApply .content{
+  background-color: var(--containerColor);
+  padding: 1em;
+  transition: var(--transition);
+  margin-top: 1em;
+  border-radius: 0.5em;
+  height:auto;
+  margin-right: 1em;
+}
+.loanApply h3{
+  font-size: 30px;
+  font-family: var(--font4);
+  padding-bottom: 0.7em;
+  color: var(--buttonHoverColor);
+}
+.loanApply .container1 .inputs{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-right: 0.5em;
+}
+.loanApply .content .first button{
+  background: none;
+  margin-left: 2em;
+  width: 100%;
+}
+
+
+.loanApply h4{
+  font-family: var(--font4);
+  color: #a3a3a3;
+  font-size: 13px;
+  padding: 0.2em;
+}
+.loanApply .selectOptions h5{
+  font-size: 15px;
+  padding: 0.3em;
+  cursor: pointer;
+  color: #fff;
+}
+
+.loanApply .selectOptions h5:hover{
+  background-color: var(--buttonHoverColor);
+  border-radius: 0.3em;
+}
+
+
+.loanApply .selectOptions{
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  background: #2c2c2ccb;
+  margin-top: -0.4em;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  width: 15.5em;
+  z-index: -88;
+  position: absolute;
+
+
+
+}
+.loanApply .selectOptions.active{
+  opacity: 1;
+  margin-top: 0.4em;
+  position:absolute;
+  z-index: 1;
+}
+.loanApply .first #downArrow{
+  cursor: pointer;
+  margin-left: 3em;
+  width: 20px;
+  padding: 0.2em;
+  border-radius: 0.4em;
+  background: none;
+  
+}
+.loanApply .first{
+  width: 15.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #3d3d3d;
+  border-radius: 0.3em;
+  padding: 0.4em;
+  margin-right: 1em;
+  transition: var(--transition);
+}
+.income input{
+  font-size: 14px;
+  padding: 0.6em;
+  border-radius: 0.3em;
+  width: 100%;
+}
+.getLoan{
+  padding-top: 0em;
+}
+.getLoan h5{
+  font-size: 17px;
+  padding-top: 0.5em;
+  color: var(--buttonHoverColor);
+}
+.getLoan h2{
+  color: #fff;
+  font-size: 40px;
+  padding-left: 0.2em;
+  margin-top: -0.2em;
+}
+.submitBtn{
+  font-size: 20px;
+  padding: 0.4em;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+  border-radius: 0.2em;
+  transition: var(--transition);
+}
+.submitBtn:hover{
+  background-color: var(--buttonHoverColor);
+  transition: var(--transition);
+}
+.getLoan h2 span{
+  font-size: 50px;
+  padding-top: 1em;
+  color: #bdbdbd;
+}
+.getLoan li {
+  list-style: none;
+  color: #bbbbbb;
+  font-size: 17px;
+  line-height: 1.5em;
+  padding-top: 1em;
+}
+.getLoan li span{
+  font-size: 15px;
+  color: #bbbbbb;
+}
+.getLoan h6{
+  text-align: center;
+  color: red;
+  font-size: 15px;
+  padding-top: 0.4em;
+}
+.start{
+  background: none;
+  margin: auto;
+  width: fit-content;
+  margin-top: 1em;
+}
+#getStartedBtn{
+  font-size: 20px;
+  padding: 0.5em;
+  background: var(--buttonHoverColor);
+  border-radius: 0.2em;
+  margin-top: 0.3em;
+  cursor: pointer;
+  transition: var(--transition);
+}
+#getStartedBtn:hover{
+  background: var(--lightGreen);
+  transition: var(--transition);
+}
+.loanSection2{
+  background-color: var(--containerColor);
+  background-image: url(/assets/bg4.jpg);
+  background-position: center;
+  border: var(--bordered);
+  margin: auto;
+  margin-top: 7em;
+  width: 90%;
+  padding: 2em;
+  border-radius: 0.5em;
+}
+.loanSection2 .loanPeople{
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+}
+.loanSection2  .loanPeople span{
+  background-color: var(--buttonHoverColor);
+  padding: 0.4em;
+  border-bottom-left-radius: 1em;
+  border-top-right-radius: 1em;
+  color: #fff;
+}
 
 @media only screen and (max-width: 600px){
   .popup {
@@ -1402,13 +1647,13 @@ footer .footerContents{
     margin: 0;
     grid-template-columns: 1fr 1fr;
     transition: var(--transition);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     height: auto;
   }
 
   .navBar .logo img {
     width: 150px;
-    margin-right: 10em;
+    margin-right: 12em;
     padding: 0.3em;
     /* margin: 0.3em; */
     margin-top: 0.5em;
@@ -1425,6 +1670,14 @@ footer .footerContents{
     transition: all 0.5s;
     width: 100%;
     padding: 0;
+  }
+  .navBar.active{
+    border-bottom: 2px solid #00ff9d;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+  }
+  .navBar .navLinks.active{
+    margin-top: 0;
   }
   .navBar .navLinks .links {
     margin: auto;
@@ -1471,8 +1724,10 @@ footer .footerContents{
   .navLinks .company{
     padding: 0.2em;
     position: relative;
-    margin-left: 6.5em;
-    margin-top: 0em;
+    margin: auto;
+    margin-left: 7.5em;
+    margin-bottom: 2em;
+    margin-top: 0em;  
     display: none;
     transition: var(--transition);
 
@@ -1481,105 +1736,13 @@ footer .footerContents{
     display: block;
   }
 
+
   .navLinks .company ol li{
     line-height: 1.5em;
     background: var(--containerColor);
   }
   .navLinks .company ol li:hover{
     background-color: var(--buttonHoverColor);
-  }
-
-
-
-
-  .navBar .navLinks .account1{
-    display: none;
-  }
-  .account{
-    padding-left: 7em;
-  }
-  .navLinks.active{
-    background: none;
-    display: block;
-    margin: 0;
-  }
-  .account #acctBtn {
-    margin-bottom: 0.3em;
-    background: var(--containerColor);
-    border: 2px solid #333333;
-    font-size: 17px;
-    padding-top: 0.1em;
-    transition: var(--transition);
-    border-radius: 1em;
-    cursor: pointer;
-    display: flex;
-
-    width: 7em;
-    height: 47px;
-
-  }
-  .account #acctImg{
-    width: 40px;
-  }
-  .account #acctBtn #arrDwn {
-    margin-top: 0.7em;
-    width: 20px;
-    margin-left: 2.3em;
-    transform: rotate(180deg);
-    transition: var(--transition);
-    
-  }
-  .account #acctBtn #arrDwn.active {
-    transform: rotate(0deg);
-    transition: var(--transition);
-  }
-
-  .account .acctContents{
-    display: none;
-  }
-
-  .account .acctContents.active {
-    transition: var(--transition);
-    display: block;
-  }
-  .account .acctContents ol {
-    position: relative;
-    background: var(--dropDownContentsColor);
-    border-radius: 0.4em;
-    border: 2px solid #333333;
-    width: 8em;
-    padding: 0.1em;
-    box-shadow: none;
-    margin-left: -0.2em;
-    margin-bottom: 1em;
-  }
-  .account .acctContents ol li {
-    list-style: none;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    font-size: var(--font3);
-  }
-  .acctContents ol li a button{
-    text-decoration: none;
-    color: #cecece;
-    font-size: 17px;
-    font-family: var(--font5);
-    background: var(--backgroundColor);
-    border: none;
-    padding: 0.4em;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 0.3em;
-  }
-
-
-  .acctContents ol #li1 {
-    border: none;
-  }
-
-  .navBar .navLinks .account{
-    margin-top: 1em;
-    display: block;
   }
 
   .arrowToUp{
@@ -1607,6 +1770,25 @@ footer .footerContents{
   .arrowToUp button{
     background: none;
   }
+  .navBar .group{
+    margin-left: 9.5em;
+    width: 9em;
+    height: 2.4rem;
+    cursor: pointer;
+    border-radius: 6em;
+    /* margin-left: 1em; */
+    margin-bottom: 1em;
+  }
+  .navBar .group img{
+    width: 40px;
+  }
+  .navBar .group h1{
+    text-align: left;
+    justify-content: center;
+    padding-top: 0.4em;
+    font-family: var(--font2);
+    font-size: 12px;
+  }
 
 
 
@@ -1624,7 +1806,6 @@ footer .footerContents{
     border-bottom-left-radius: 10em;
     /* border-bottom-left-radius: 100%;
     border-bottom-right-radius:10%; */
-
   }
   .section1 .contents{
     grid-template-columns: 1fr;
@@ -1656,19 +1837,24 @@ footer .footerContents{
     padding-top: 0em;
     padding-bottom: 0.5em;
     border-radius: 1em;
-    font-size: 35px;
+    font-size: 36px;
     padding-right: 1em;
     text-align: center;
 
   }
   .section1  .container1 .text h3{
     margin-top: 1em;
-    border-left: 2px solid var(--lightGreen);
+    border: 2px solid var(--lightGreen);
+    border-top: none;
+    border-bottom: none;
     border-radius: 0.5em;
     line-height: 1.3em;
-    font-size: 15px;
-    padding-right: 1em;
+    text-align: center;
+    padding-right: 0.5em;
+    font-size: 14px;
+    margin-right: 3em;
     padding-left: 0.5em;
+    
   }
 
   .section1 #h4{
@@ -2079,6 +2265,8 @@ footer .footerContents{
   .help{
     background: none;
     width: 10%;
+    margin: 0;
+    padding: 0;
 
   }
 
@@ -2089,12 +2277,10 @@ footer .footerContents{
     margin-top: 13em;
     width: 0%;
 
-
   }
   .help .textContainer{
     width: 21em;
-    border-radius: 0.3em;
-    margin: auto;
+    border-radius: 0.5em;
     padding: 1em;
   }
 
@@ -2153,6 +2339,58 @@ footer .footerContents{
     text-decoration: none;
     color: #9e9e9e;
   }
+
+  .getApp{
+    padding: 1em;
+    margin-top: 10em;
+    width: 100%;
+    border-radius: 0;
+  }
+  .getApp h1{
+    color: #fff;
+    font-family: var(--font1);
+    text-align: center;
+    font-size: 27px;
+  }
+  .getApp .app{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: auto;
+    margin-top: 2em;
+  }
+  .getApp .appContainer{
+    display: flex;
+    width: 8em;
+    cursor: pointer;
+    height: 2.3rem;
+    background-color: #fff;
+    margin-top: 1em;
+    border-radius: 2em;
+    padding: 0.3em;
+  }
+  .getApp a{
+    text-decoration: none;
+    color: #000;
+  }
+  .getApp img{
+    width: 25px;
+    margin-left: 0.3em;
+  }
+  .getApp .text{
+    padding-left: 0.5em;
+  }
+
+  .getApp h4{
+    font-family: var(--font4);
+    font-size: 11px;
+  }
+  .getApp h5{
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+
 
   footer{
     margin-top: 5em;

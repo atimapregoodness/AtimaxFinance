@@ -8,7 +8,7 @@
             <link rel="stylesheet" href="/css/style.css">
             <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
       </head>
-      
+
       <body>
             <header>
                   <nav class="navBar">
@@ -21,8 +21,8 @@
                         <div class="navLinks">
                               <ol class="links">
                                     <li><a href="index.html">Personal</a></li>
-                                    <li><a href="features.html" id="targetLink">Features</a></li>
-                                    <li><a href="loan.html">Loan</a></li>
+                                    <li><a href="features.html">Features</a></li>
+                                    <li><a href="loan.html" id="targetLink">Loan</a></li>
                                     <li id="companyLink">Company<span><img src="/assets/downWhiteArrow.png" alt=""
                                                       id="whiteArrow"></span></li>
                               </ol>
@@ -44,81 +44,60 @@
             <div class="arrowToUp">
                   <button id="toTopBtn"><img src="/assets/arrowToUpImage.png" alt="arrowToUpImage"></button>
             </div>
-            <div class="features1">
-                  <div class="text">
-                        <h1>Simple, Fast and easy Banking that keeps you at ease</h1>
-                        <h2>Everything you need to spend, save, pay and get paid in one place...</h2>
-                        <button>Get Started</button>
+            <div class="loanText">
+                  <h1>Bring your plans to reality</h1>
+                  <h2>Grow your bunsiness or take care of all your financial needs.</h2>
+            </div>
+            <div class="loanApply revealRight">
+                  <div class="container1">
+                        <div class="content">
+                              <h3>Get up to N7,000,000.00 today</h3>
+                              <div class="inputs">
+                                    <div id="inputTarget">
+                                          <div class="first">
+                                                <h4 id="inputH1">Employment status</h4> <button><img src="/assets/downWhiteArrow.png" alt="" id="downArrow"></button>
+                                          </div>
+                                          <div class="selectOptions">
+                                                <h5 id="option1">Employed</h5>
+                                                <h5 id="option2">Self Employed</h5>
+                                                <h5 id="option3">Unemployed</h5>
+                                          </div>
+                                    </div>
+                                    <div class="income">
+                                          <input type="number" placeholder="your monthly income" id="incomeText">
+                                    </div>
+                              </div>
+                              <button class="submitBtn">Submit</button>
+                              <div class="getLoan">
+                                    <ul>
+                                          <li>Employment Status: <span id="employmentStatus">Null</span></li>
+                                          <li>Monthly Income: <span id="monthlyIncome">Null</span></li>
+                                    </ul>
+                                    <h5>You can get a loan of up to</h5>
+                                    <h2>N<span id="loanAmount">0</span></h2>
+                                    <h6>Note: loan is available for only Nigerians</h6>
+                              </div>
+                              <div class="start">
+                                    <button id="getStartedBtn">Get Started</button>
+                              </div>
+                              
+                        </div>
                   </div>
-                  <div class="img">
-                        <img src="/assets/bonusWomanImage.png" alt="">
+                  <div class="container2">
+
                   </div>
             </div>
-            <div class="features2">
-                  <div class="text">
-                        <h1>Make all the right money moves, Save and Invest where you can watch your money grow with peace of mind</h1>
-                  </div>
-                  <div class="containers revealRight">
-                        <div class="container target">
-                              <div class="img">
-                                    <img src="/assets/managementIcon.png" alt="managementIcon">
-                              </div>
-                              <h2>Simple online management</h2>
-                        </div>
-                        <div class="container">
-                              <div class="img">
-                                    <img src="assets/notificationsIcon.png" alt="notificationsIcon">
-                              </div>
-                              <h2>Instant alert notification</h2>
-                        </div>
-                        <div class="container target">
-                              <div class="img">
-                                    <img src="/assets/payoutIcon.png" alt="payoutIcon">
-                              </div>
-                              <h2>instant payouts</h2>
-                        </div>
-                  </div>
+
+            <div class="loanSection2">
+                  <h1 class="loanPeople">Over <span class="peopleNo">4 million</span> loan applications</h1>
             </div>
-            <h1 class="breakHeader">Your money will be in our account, but you are in control of it. <br>Bank with us whenever and wherever you want.</h1>
-            <div class="features">
-                  <div class="secondContainer revealRight">
-                        <div class="container">
-                              <div class="img">
-                                    <img src="assets/accountImg.png" alt="accountImg">
-                              </div>
-                              <h1><span>AtimaxFinance</span> Account</h1>
-                              <h2>Send and receive money, instant transaction notification, no transaction fee</h2>
-                        </div>
-                        <div class="container">
-                              <div class="img">
-                                    <img src="/assets/payBillImg.png" alt="payBillImg">
-                              </div>
-                              <h1>Pay bills, but airtime and data</h1>
-                              <h2>Pay bills online, buy airtime or data from any network in the world. <span>Instant receive.</span></h2>
-                        </div>
-                        <div class="container">
-                              <div class="img">
-                                    <img src="/assets/cardImg.png" alt="cardImage">
-                              </div>
-                              <h1>Virtual Cards</h1>
-                              <h2>Make any payments and transact to any parts of the world, <span>fast and reliable</span></h2>
-                        </div>
-                        <div class="container">
-                              <div class="img">
-                                    <img src="/assets/referralimg.png" alt="referralimg" id="referralImg">
-                              </div>
-                              <h1>Referrals and Daily Bonuses</h1>
-                              <h2>Refer your friends to <span>AtimaxFinance</span> to receive referral reward, and also receive daily bonuses every 24 hours</h2>
-                        </div>
-                  </div>
-                  <div class="firstContainer reveal">
-                        <img src="/assets/earnImg2.png" alt="">
-                  </div>
-            </div>
+
+
             <footer>
                   <!-- <div class="circle1"></div> -->
                   <div class="about">
-                        <h1>AtimaxFinance designed is built with the aim of making online banking easy, it enables users to
+                        <h1>AtimaxFinance designed is built with the aim of making online banking easy, it enables users
+                              to
                               experience fast and reliable banking. Zero worries and 0% loss of funds</h1>
                   </div>
                   <div class="footerContents">
@@ -141,7 +120,7 @@
                         <div class="content-three">
                               <h1>Contacts</h1>
                               <ol>
-            
+
                                     <li><a href="#">+234 9067 1508 62</a></li>
                                     <li><a href="#">+234 7044 4953 26</a></li>
                                     <li><a href="#">customerservice@atimaxfinance.com</a></li>
@@ -150,8 +129,10 @@
                         <div class="content-four">
                               <h1>Locations</h1>
                               <ol>
-                                    <li><img src="/assets/nigeriaFlag.png" alt=""><a href="#">Before firt bridge, along Tuomo Road,
-                                                Bomadi main town, Bomadi Local Government Area, Delta State, Nigeria.</a></li>
+                                    <li><img src="/assets/nigeriaFlag.png" alt=""><a href="#">Before firt bridge, along
+                                                Tuomo Road,
+                                                Bomadi main town, Bomadi Local Government Area, Delta State,
+                                                Nigeria.</a></li>
                               </ol>
                         </div>
                   </div>
@@ -170,6 +151,8 @@
                   </div>
             </div>
 
-      <script src="js/app.js"></script>
+            <script src="loan.js"></script>
+            <script src="js/app.js"></script>
       </body>
+
 </html>

@@ -1,4 +1,3 @@
-
 const body = document.querySelector('body')
 let lastScroll = 50;
 const nav = document.querySelector('.navBar')
@@ -18,26 +17,13 @@ window.addEventListener('scroll', () => {
 
 
 
-const acctBtn = document.querySelector('#acctBtn')
-const acctCont = document.querySelector('.acctContents')
-const arrDwn = document.querySelector('#arrDwn')
-
-acctBtn.addEventListener('click', () => {
-      acctCont.classList.toggle('active')
-      arrDwn.classList.toggle('active')
-
-})
-document.querySelectorAll('.navLinks li').forEach(n => n.addEventListener('click', () => {
-      acctCont.classList.remove('active')
-      arrDwn.classList.remove('active')
-}))
-
-
 const menuBtn = document.querySelector('.menu')
 const navLinks = document.querySelector('.navLinks')
+const navBar = document.querySelector('.navBar')
 
 menuBtn.addEventListener('click', () => {
       navLinks.classList.toggle('active')
+      navBar.classList.toggle('active')
 })
 
 const compLink = document.querySelector('#companyLink')
@@ -48,7 +34,6 @@ compLink.addEventListener('click', () => {
       comp.classList.toggle('active')
       whiteArrow.classList.toggle('active')
 })
-
 
 window.addEventListener('scroll', reveal)
 function reveal() {
@@ -89,6 +74,7 @@ toTopBtn.addEventListener('click', () => {
       window.location.href = '#top';
 })
 
+
 const popOff = document.querySelector('.popOff')
 const popUp = document.querySelector('.popup')
 const continueBtn = document.querySelector('#continueBtn')
@@ -99,8 +85,6 @@ setTimeout(() => {
 continueBtn.addEventListener('click', () => {
       popOff.className = 'popOff';
 })
-
-
 
 
 
