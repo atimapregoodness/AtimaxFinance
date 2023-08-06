@@ -18,17 +18,15 @@ downArrow.addEventListener('click', () => {
       status.textContent = "Null";
       income.textContent = "Null";
 })
-
 const click = (optionName) =>{
       optionName.addEventListener('click', () => {
             inputH1.textContent = optionName.textContent;
             selectOptions.classList.remove('active') 
       })
-      
-
+      sisisssi
       submitLoanBtn.addEventListener('click', () => {
             const incomeValue = parseInt(incomeText.value)
-            amount = incomeValue * 0.02 / 2000
+            amount = incomeValue * 0.02 / 400
             loanAmount.textContent = incomeValue * amount;
 
             status.textContent = inputH1.textContent;

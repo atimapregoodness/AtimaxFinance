@@ -360,10 +360,9 @@ body {
 }
 .navBar .group h1{
   text-align: left;
-  justify-content: center;
-  padding-top: 0.4em;
+  padding-top: 1em;
   font-family: var(--font2);
-  font-size: 12px;
+  font-size: 9px;
 }
 
 .section1{
@@ -1105,9 +1104,6 @@ body {
 footer{
   background-color: var(--containerColor);
   margin-top: 8em;
-  background-image: url(/assets/bg7.jpg);
-  /* background-size: cover; */
-  background-position: center;
   padding: 1em;
   padding-bottom: 2em;
 }
@@ -1168,7 +1164,8 @@ footer .footerContents{
 .copy{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: var(--containerColor);
+  background-color: #ffffff05;
+  backdrop-filter: blur(400px);
   border-top: var(--bordered);
   padding: 0.5em;
 
@@ -1414,7 +1411,7 @@ footer .footerContents{
   grid-template-columns: 1fr 1fr;
 }
 .loanApply .container1{
-  width: 80%;
+  width: 90%;
 }
 
 
@@ -1426,6 +1423,7 @@ footer .footerContents{
   border-radius: 0.5em;
   height:auto;
   margin-right: 1em;
+  width: 35em;
 }
 .loanApply h3{
   font-size: 30px;
@@ -1456,6 +1454,7 @@ footer .footerContents{
   padding: 0.3em;
   cursor: pointer;
   color: #fff;
+  font-family: var(--font4);
 }
 
 .loanApply .selectOptions h5:hover{
@@ -1471,7 +1470,7 @@ footer .footerContents{
   margin-top: -0.4em;
   border-radius: 0.3em;
   padding: 0.4em;
-  width: 15.5em;
+  width: 16em;
   z-index: -88;
   position: absolute;
 
@@ -1494,7 +1493,7 @@ footer .footerContents{
   
 }
 .loanApply .first{
-  width: 15.5em;
+  width: 16em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #3d3d3d;
@@ -1514,8 +1513,10 @@ footer .footerContents{
 }
 .getLoan h5{
   font-size: 17px;
-  padding-top: 0.5em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   color: var(--buttonHoverColor);
+  font-family: var(--font4);
 }
 .getLoan h2{
   color: #fff;
@@ -1599,6 +1600,12 @@ footer .footerContents{
   border-bottom-left-radius: 1em;
   border-top-right-radius: 1em;
   color: #fff;
+}
+.loanApply .container2{
+  padding-top: 8em;
+}
+.loanApply .container2 img{
+  width: 600px;
 }
 
 @media only screen and (max-width: 600px){
