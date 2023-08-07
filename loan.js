@@ -23,7 +23,6 @@ const click = (optionName) =>{
             inputH1.textContent = optionName.textContent;
             selectOptions.classList.remove('active') 
       })
-      sisisssi
       submitLoanBtn.addEventListener('click', () => {
             const incomeValue = parseInt(incomeText.value)
             amount = incomeValue * 0.02 / 400

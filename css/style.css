@@ -161,9 +161,29 @@ body {
   margin-top: -0.5em;
   padding-top: 0em;
   padding-bottom: 0;
-  /* background-color: rgba(51, 51, 51, 0.39); */
-  background: var(--containerColor);
+  background-color: #13151871;
+  backdrop-filter: blur(20px);
+  transition: var(--transition);
+
 }
+
+.scrollUp .logo{
+  margin-right: 1;
+  margin-left: -30em;
+  transition: var(--transition);
+}
+.scrollUp .navLinks .links{
+  margin-left: -1em;
+  margin: 0;
+  border-radius: 0.4em;
+  margin: auto;
+}
+.scrollUp .group{
+  opacity: 0;
+  margin-top: -20em;
+  transition: var(--transition);
+}
+
 
 
 
@@ -196,7 +216,8 @@ body {
 .navBar .navLinks .links {
   list-style: none;
   padding-top: 0em;
-  padding-left: 15em;
+  padding-left: 0em;
+  margin-left: 15em;
 }
 .navBar .navLinks .links li {
   display: inline-block;
@@ -268,6 +289,7 @@ body {
   opacity: 0;
   transition: var(--transition);
   width: 8.6em;
+  display: none;
 
 }
 .navLinks .links #whiteArrow{
@@ -278,6 +300,7 @@ body {
   cursor: pointer;
 }
 .navLinks .company.active{
+  display: block;
   opacity: 1;
   transition: var(--transition);
 }
@@ -311,7 +334,7 @@ body {
 .arrowToUp{
   left: 95%;
   opacity: 0;
-  top: 65em;
+  top: 60em;
   position: absolute;
   transition: var(--transition);
   z-index: 77;
@@ -323,7 +346,7 @@ body {
   transition: var(--transition);
   position: fixed;
   z-index: 77;
-  top: 36em;
+  top: 34em;
   left: 95%;
 }
 .arrowToUp img{
@@ -384,7 +407,20 @@ body {
 
 
 }
-
+.worldImage{
+  position: absolute;
+  opacity: 0.05;
+}
+.worldImage img{
+  width: 500px;
+  z-index: -7;
+  animation: rotate 10s infinite;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(360deg);
+  }
+}
 .section1 .contents{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1102,16 +1138,35 @@ body {
 
 
 footer{
-  background-color: var(--containerColor);
   margin-top: 8em;
   padding: 1em;
-  padding-bottom: 2em;
+  background-color: #ffffff0a;
+
 }
+footer .container{
+  display: flex;
+  padding: 1em;
+  
+}
+footer .text{
+  padding-top: 4em;
+  width: 30em;
+  margin-right: 1em;
+  
 
-
+}
+footer .text img{
+  width: 190px;
+}
+footer .text h4{
+  color: #b6b6b6;
+  margin-top: -1em;
+  font-size: 13px;
+  padding-left: 1.6em;
+}
 footer h1{
-  padding-top: 1em;
-  color: #fff;
+  padding-top: 1.5em;
+  color: var(--lightGreen);
   font-family: var(--font4);
   font-size: 25px;
   padding-bottom: 0.4em;
@@ -1128,19 +1183,13 @@ footer a{
   font-family: var(--font3);
   font-size: 14px;
 }
-footer .about{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-footer .about h1{
-  font-size: 12px;
-  padding-right: 30em;
-  color: #808080;
-  font-family: var(--font3);
-  line-height: 1.7em;
-}
+
 footer img{
   width: 30px;
+  padding-bottom: 0.9em;
+}
+footer ol{
+  padding-bottom: 1em;
 }
 footer .content-four li{
   display: flex;
@@ -1154,58 +1203,56 @@ footer .content-four li a{
 }
 footer .content-four li{
   line-height: 0.7em;
+  padding-right: 0.7em;
 }
 footer .footerContents{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding-left: 1em;
-}
-
-.copy{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: #ffffff05;
-  backdrop-filter: blur(400px);
-  border-top: var(--bordered);
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 0.5em;
+  border-radius: 0.5em;
+  padding-left: 1.5em;
+}
+footer input{
+  width: 80%;
+  font-size: 15px;
+  padding: 1em;
+  border-radius: 0.3em;
+}
+.copy .about h1{
+  font-size: 12px;
+  color: #808080;
+  font-family: var(--font3);
+  line-height: 1.7em;
+  background: none;
+  padding: 1em;
+  margin: auto;
+  width: 50%;
+}
+.copy .about{
+  margin: auto;
+  margin-top: 2em;
+  width: 100%;
+  background: #ffffff0a;
+  border-radius: 0.5em;
+}
 
-}
-.copy img{
-  width: 25px;
-}
-.copy h4{
-  color: #858585;
-  padding-top: 0.5em;
-  padding-left: 0.5em;
-  font-size: 13px;
-}
-.copy .text{
-  display: flex;
-  padding: 0.5em;
-  width: fit-content;
-  margin:auto;
-}
 
-.copy li{
-  padding-right: 1em;
+
+.socialMedia li{
   list-style: none;
   display: inline-block;
 }
-.copy li a img{
+.socialMedia li a img{
   background-color: #fff;
   width: 2em;
-  padding: 0.1em;
-  border-radius: 50%;
+  padding: 0.4em;
+  border-radius: 0.2em;
   opacity: 0.5;
   transition: var(--transition);
 }
-.copy li a img:hover{
+.socialMedia li a img:hover{
   opacity: 1;
   transition: var(--transition);
-}
-.copy .socialMedia{
-  width: fit-content;
-  margin:auto;
 }
 
 /* feasuures style */
@@ -1363,13 +1410,38 @@ footer .footerContents{
   text-align: center;
 
 }
-.loanText{
+.loanSection1{
   width: 100%;
   height: 45em;
   margin: auto;
   padding-top: 10em;
   animation: imgShow 10s infinite;
+  /* background-image: url(/assets/woman_with_laptop-img1.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
 
+
+}
+.loanSectionContainer1{
+  width: 100%;
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.loanSection1 .container{
+  margin-top: 2em;
+  background-color: #ffffff15;
+  backdrop-filter: blur(20px);
+  padding: 1em;
+  margin-left: 1em;
+  border-radius: 0.3em;
+  height: 10em;
+  margin-right: 2em;
+}
+.loanSection1 h1{
+  color: #7a7a7a;
+  text-align: center;
+  font-size: 20px;
 }
 @keyframes imgShow {
   0%{
@@ -1389,12 +1461,11 @@ footer .footerContents{
   }
 }
 .loanText h1{
-  width: 60%;
   margin: auto;
+  width: 60%;
   font-family: var(--font5);
   color: #fff;
-  font-size: 100px;
-  text-align: center;
+  font-size: 80px;
 }
 .loanText h2{
   text-align: center;
@@ -1404,14 +1475,14 @@ footer .footerContents{
 }
 
 .loanApply{
-  width: 95%;
-  padding-top: 7em;
+  width: 93%;
   margin: auto;
+  padding-top: 7em;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .loanApply .container1{
-  width: 90%;
+
 }
 
 
@@ -1419,8 +1490,8 @@ footer .footerContents{
   background-color: var(--containerColor);
   padding: 1em;
   transition: var(--transition);
-  margin-top: 1em;
-  border-radius: 0.5em;
+  border-top-right-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
   height:auto;
   margin-right: 1em;
   width: 35em;
@@ -1563,8 +1634,9 @@ footer .footerContents{
   background: none;
   margin: auto;
   width: fit-content;
-  margin-top: 1em;
+  margin-top: 0.4em;
 }
+
 #getStartedBtn{
   font-size: 20px;
   padding: 0.5em;
@@ -1602,10 +1674,13 @@ footer .footerContents{
   color: #fff;
 }
 .loanApply .container2{
-  padding-top: 8em;
+
 }
+
 .loanApply .container2 img{
-  width: 600px;
+  width: 700px;
+  border-top-left-radius: 0.4em;
+  border-bottom-left-radius: 0.4em;
 }
 
 @media only screen and (max-width: 600px){
@@ -1648,6 +1723,31 @@ footer .footerContents{
 
   .popup.active{
     display: none;
+  }
+  .scrollUp .navBar{
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-bottom: 0;
+    background-color: rgba(51, 51, 51, 0.39);
+    backdrop-filter: blur(20px);
+
+}
+  .scrollUp .logo{
+    margin-right: 10;
+    margin-left: 0em;
+  }
+  .scrollUp .navLinks .links{
+    margin: auto;
+    margin-left: 0em;
+    background: none;
+    width: fit-content;
+    border-radius: 0;
+    backdrop-filter: blur(0px);
+    margin-right: 0m;
+  }
+  .scrollUp .group{
+    opacity: 1;
+    margin-top: 0em;
   }
   .navBar{
     display: grid;
@@ -1732,7 +1832,7 @@ footer .footerContents{
     padding: 0.2em;
     position: relative;
     margin: auto;
-    margin-left: 7.5em;
+    margin-left: 6.3em;
     margin-bottom: 2em;
     margin-top: 0em;  
     display: none;
@@ -1778,8 +1878,8 @@ footer .footerContents{
     background: none;
   }
   .navBar .group{
-    margin-left: 9.5em;
-    width: 9em;
+    margin-left: 7.5em;
+    width: 11em;
     height: 2.4rem;
     cursor: pointer;
     border-radius: 6em;
@@ -2400,74 +2500,90 @@ footer .footerContents{
 
 
   footer{
-    margin-top: 5em;
+    margin: 0;
+    margin-top: 8em;
+    padding: 1em;
+
   }
-
-
-  footer h1{
-    font-size: 18px;
+  footer .container{
+    display: block;
+    padding: 1em;
+    margin: 0;
+    
+  }
+  footer .text{
     padding-top: 1em;
+    padding-bottom: 1.5em;
+    margin: 0;
+    width: 100%;
+    background-color: var(--containerColor);
+
+    
+
+  }
+  footer .text img{
+    width: 120px;
+    margin-left: 7em;
+
+  }
+  footer .text h4{
+    font-size: 13px;
+    text-align: center;
+  }
+  footer h1{
+    padding-top: 1.5em;
+    color: var(--lightGreen);
+    font-family: var(--font4);
+    font-size: 20px;
+    padding-bottom: 0.4em;
   }
 
   footer li{
     line-height: 1.5em;
+    padding-left: 0.5em;
   }
   footer a{
     font-size: 13px;
   }
-  footer .about{
-    grid-template-columns: 1fr;
-    background: none;
-    width: 70%;
-    margin: auto;
-    padding: 0;
-  }
-  footer .about h1{
-    font-size: 10px;
-    line-height: 1.7em;
-    padding: 0;
-  }
+
   footer img{
     width: 30px;
+    padding-bottom: 0.9em;
   }
-
+  footer ol{
+    padding-bottom: 0.5em;
+  }
+  footer .content-four li{
+    display: flex;
+  }
   footer .content-four li a{
     font-size: 11px;
-    padding-right: 1em;
     line-height: 1.5em;
     padding-left: 0.5em;
   }
   footer .content-four li{
-    line-height: 0.7em;
+    line-height: 0em;
+    padding-right: 0em;
   }
   footer .footerContents{
-    grid-template-columns: 1fr ;
+    grid-template-columns: 1fr;
+    padding: 0em;
   }
-
-  .copy img{
-    width: 20px;
+  footer input{
+    width: 70%;
+    font-size: 12px;
+    padding: 1em;
+    border-radius: 0.2em;
   }
-  .copy h4{
-    padding-top: 0.5em;
-    padding-left: 0.5em;
+  .copy .about h1{
     font-size: 10px;
+    padding: 0.5em;
+    width: 90%;
   }
-  .copy .text{
-    padding: 0.2em;
-  }
-
-  .copy li{
-    padding-right: 0.4em;
-    list-style: none;
-    display: inline-block;
-  }
-  .copy li a img{
-    width: 1.5em;
-    padding: 0.1em;
-  }
-  .copy .socialMedia{
-    width: fit-content;
-    margin:auto;
+  .copy .about{
+    margin: 0;
+    margin-top: 1em;
+    border-radius: 0.2em;
   }
 
 
@@ -2614,6 +2730,15 @@ footer .footerContents{
     color: #fff;
     font-size: 25px;
     text-align: center;
+  }
+  .worldImage{
+    position: absolute;
+    opacity: 0.05;
+  }
+  .worldImage img{
+    width: 340px;
+    z-index: -7;
+    animation: rotate 10s infinite;
   }
 
 
